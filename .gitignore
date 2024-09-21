@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Environment
+.env
+
+# Database
+backend/database/events.db
+
+# Logs
+backend/logs/
+
+# Build
+frontend/build/
+
+# OS Files
+.DS_Store
