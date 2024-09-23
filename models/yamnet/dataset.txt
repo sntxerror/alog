@@ -1,0 +1,1 @@
+/home/sntx/khadas_npu/yamnet_model/sample_input.npy

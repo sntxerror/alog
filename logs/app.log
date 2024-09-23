@@ -1,0 +1,862 @@
+2024-09-22 23:03:57,191 - Alog - INFO - Building frontend...
+2024-09-22 23:03:57,191 - Alog - INFO - Frontend already built.
+2024-09-22 23:03:57,197 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.7:5000
+2024-09-22 23:03:57,198 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-22 23:04:02,110 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:04:02] "GET / HTTP/1.1" 200 -
+2024-09-22 23:04:02,202 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:04:02] "GET /static/js/main.becf57f0.js HTTP/1.1" 200 -
+2024-09-22 23:04:02,329 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:04:02] "GET /static/css/main.e6c13ad2.css HTTP/1.1" 200 -
+2024-09-22 23:04:02,603 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:04:02] "GET /favicon.ico HTTP/1.1" 200 -
+2024-09-22 23:04:02,710 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:04:02] "GET /manifest.json HTTP/1.1" 200 -
+2024-09-22 23:04:02,712 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:04:02] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2024-09-22 23:04:02,736 - EventStorage - INFO - Database connected.
+2024-09-22 23:04:02,738 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:04:02] "[31m[1mGET /api/events?start_time=2024-09-21T22:02:35.599Z&end_time=2024-09-23T22:02:35.599Z HTTP/1.1[0m" 415 -
+2024-09-22 23:04:02,878 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:04:02] "GET /logo192.png HTTP/1.1" 200 -
+2024-09-22 23:04:07,537 - SoundClassifier - ERROR - Failed to load YAMNet model: '_UserObject' object has no attribute 'class_names'
+2024-09-22 23:04:07,540 - SpeechRecognizer - ERROR - Failed to load Vosk models: Failed to create a model
+2024-09-22 23:04:07,559 - AudioCapture - INFO - Audio stream started.
+2024-09-22 23:04:40,344 - pydub.converter - DEBUG - subprocess.call(['ffmpeg', '-y', '-f', 'wav', '-i', '/tmp/tmpmpf5rsi9', '-b:a', '64k', '-f', 'mp3', '/tmp/tmpwrbjycj9'])
+2024-09-22 23:04:41,216 - pydub.converter - DEBUG - subprocess output: b'ffmpeg version 4.2.7-0ubuntu0.1 Copyright (c) 2000-2022 the FFmpeg developers'
+2024-09-22 23:04:41,217 - pydub.converter - DEBUG - subprocess output: b'  built with gcc 9 (Ubuntu 9.4.0-1ubuntu1~20.04.1)'
+2024-09-22 23:04:41,217 - pydub.converter - DEBUG - subprocess output: b'  configuration: --prefix=/usr --extra-version=0ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/aarch64-linux-gnu --incdir=/usr/include/aarch64-linux-gnu --arch=arm64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared'
+2024-09-22 23:04:41,217 - pydub.converter - DEBUG - subprocess output: b'  libavutil      56. 31.100 / 56. 31.100'
+2024-09-22 23:04:41,217 - pydub.converter - DEBUG - subprocess output: b'  libavcodec     58. 54.100 / 58. 54.100'
+2024-09-22 23:04:41,217 - pydub.converter - DEBUG - subprocess output: b'  libavformat    58. 29.100 / 58. 29.100'
+2024-09-22 23:04:41,217 - pydub.converter - DEBUG - subprocess output: b'  libavdevice    58.  8.100 / 58.  8.100'
+2024-09-22 23:04:41,218 - pydub.converter - DEBUG - subprocess output: b'  libavfilter     7. 57.100 /  7. 57.100'
+2024-09-22 23:04:41,218 - pydub.converter - DEBUG - subprocess output: b'  libavresample   4.  0.  0 /  4.  0.  0'
+2024-09-22 23:04:41,218 - pydub.converter - DEBUG - subprocess output: b'  libswscale      5.  5.100 /  5.  5.100'
+2024-09-22 23:04:41,218 - pydub.converter - DEBUG - subprocess output: b'  libswresample   3.  5.100 /  3.  5.100'
+2024-09-22 23:04:41,218 - pydub.converter - DEBUG - subprocess output: b'  libpostproc    55.  5.100 / 55.  5.100'
+2024-09-22 23:04:41,218 - pydub.converter - DEBUG - subprocess output: b'Guessed Channel Layout for Input Stream #0.0 : mono'
+2024-09-22 23:04:41,218 - pydub.converter - DEBUG - subprocess output: b"Input #0, wav, from '/tmp/tmpmpf5rsi9':"
+2024-09-22 23:04:41,218 - pydub.converter - DEBUG - subprocess output: b'  Duration: 00:00:30.00, bitrate: 512 kb/s'
+2024-09-22 23:04:41,218 - pydub.converter - DEBUG - subprocess output: b'    Stream #0:0: Audio: pcm_s32le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s32, 512 kb/s'
+2024-09-22 23:04:41,218 - pydub.converter - DEBUG - subprocess output: b'Stream mapping:'
+2024-09-22 23:04:41,219 - pydub.converter - DEBUG - subprocess output: b'  Stream #0:0 -> #0:0 (pcm_s32le (native) -> mp3 (libmp3lame))'
+2024-09-22 23:04:41,219 - pydub.converter - DEBUG - subprocess output: b'Press [q] to stop, [?] for help'
+2024-09-22 23:04:41,219 - pydub.converter - DEBUG - subprocess output: b"Output #0, mp3, to '/tmp/tmpwrbjycj9':"
+2024-09-22 23:04:41,219 - pydub.converter - DEBUG - subprocess output: b'  Metadata:'
+2024-09-22 23:04:41,219 - pydub.converter - DEBUG - subprocess output: b'    TSSE            : Lavf58.29.100'
+2024-09-22 23:04:41,219 - pydub.converter - DEBUG - subprocess output: b'    Stream #0:0: Audio: mp3 (libmp3lame), 16000 Hz, mono, s32p, 64 kb/s'
+2024-09-22 23:04:41,219 - pydub.converter - DEBUG - subprocess output: b'    Metadata:'
+2024-09-22 23:04:41,219 - pydub.converter - DEBUG - subprocess output: b'      encoder         : Lavc58.54.100 libmp3lame'
+2024-09-22 23:04:41,219 - pydub.converter - DEBUG - subprocess output: b'size=     235kB time=00:00:30.02 bitrate=  64.2kbits/s speed= 115x'
+2024-09-22 23:04:41,219 - pydub.converter - DEBUG - subprocess output: b'video:0kB audio:235kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.138307%'
+2024-09-22 23:04:41,221 - AudioManager - DEBUG - Audio chunk stored: audio_chunks/73be4533-a010-4cdc-9fd3-49201d69c00f.mp3
+2024-09-22 23:04:42,448 - SoundClassifier - ERROR - Sound classification failed: 'SoundClassifier' object has no attribute 'class_names'
+2024-09-22 23:04:42,452 - SpeechDetector - ERROR - Speech detection failed: Error while processing frame
+2024-09-22 23:04:42,452 - Alog - DEBUG - No speech detected.
+2024-09-22 23:04:42,452 - Alog - INFO - Processed audio chunk: 73be4533-a010-4cdc-9fd3-49201d69c00f
+2024-09-22 23:05:09,468 - pydub.converter - DEBUG - subprocess.call(['ffmpeg', '-y', '-f', 'wav', '-i', '/tmp/tmp5c70x9v9', '-b:a', '64k', '-f', 'mp3', '/tmp/tmp4_nqp6m3'])
+2024-09-22 23:05:09,874 - pydub.converter - DEBUG - subprocess output: b'ffmpeg version 4.2.7-0ubuntu0.1 Copyright (c) 2000-2022 the FFmpeg developers'
+2024-09-22 23:05:09,874 - pydub.converter - DEBUG - subprocess output: b'  built with gcc 9 (Ubuntu 9.4.0-1ubuntu1~20.04.1)'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b'  configuration: --prefix=/usr --extra-version=0ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/aarch64-linux-gnu --incdir=/usr/include/aarch64-linux-gnu --arch=arm64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b'  libavutil      56. 31.100 / 56. 31.100'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b'  libavcodec     58. 54.100 / 58. 54.100'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b'  libavformat    58. 29.100 / 58. 29.100'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b'  libavdevice    58.  8.100 / 58.  8.100'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b'  libavfilter     7. 57.100 /  7. 57.100'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b'  libavresample   4.  0.  0 /  4.  0.  0'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b'  libswscale      5.  5.100 /  5.  5.100'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b'  libswresample   3.  5.100 /  3.  5.100'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b'  libpostproc    55.  5.100 / 55.  5.100'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b'Guessed Channel Layout for Input Stream #0.0 : mono'
+2024-09-22 23:05:09,875 - pydub.converter - DEBUG - subprocess output: b"Input #0, wav, from '/tmp/tmp5c70x9v9':"
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b'  Duration: 00:00:30.00, bitrate: 512 kb/s'
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b'    Stream #0:0: Audio: pcm_s32le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s32, 512 kb/s'
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b'Stream mapping:'
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b'  Stream #0:0 -> #0:0 (pcm_s32le (native) -> mp3 (libmp3lame))'
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b'Press [q] to stop, [?] for help'
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b"Output #0, mp3, to '/tmp/tmp4_nqp6m3':"
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b'  Metadata:'
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b'    TSSE            : Lavf58.29.100'
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b'    Stream #0:0: Audio: mp3 (libmp3lame), 16000 Hz, mono, s32p, 64 kb/s'
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b'    Metadata:'
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b'      encoder         : Lavc58.54.100 libmp3lame'
+2024-09-22 23:05:09,876 - pydub.converter - DEBUG - subprocess output: b'size=     235kB time=00:00:30.02 bitrate=  64.2kbits/s speed= 126x'
+2024-09-22 23:05:09,877 - pydub.converter - DEBUG - subprocess output: b'video:0kB audio:235kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.138307%'
+2024-09-22 23:05:09,878 - AudioManager - DEBUG - Audio chunk stored: audio_chunks/bdbe8864-6fa6-4a7b-a2af-bd4dd32ad45f.mp3
+2024-09-22 23:05:10,445 - SoundClassifier - ERROR - Sound classification failed: 'SoundClassifier' object has no attribute 'class_names'
+2024-09-22 23:05:10,447 - SpeechDetector - ERROR - Speech detection failed: Error while processing frame
+2024-09-22 23:05:10,447 - Alog - DEBUG - No speech detected.
+2024-09-22 23:05:10,448 - Alog - INFO - Processed audio chunk: bdbe8864-6fa6-4a7b-a2af-bd4dd32ad45f
+2024-09-22 23:14:29,715 - Alog - INFO - Building frontend...
+2024-09-22 23:14:29,715 - Alog - INFO - Frontend already built.
+2024-09-22 23:14:29,722 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.7:5000
+2024-09-22 23:14:29,722 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-22 23:14:33,226 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:14:33] "[36mGET / HTTP/1.1[0m" 304 -
+2024-09-22 23:14:33,342 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:14:33] "[36mGET /static/js/main.becf57f0.js HTTP/1.1[0m" 304 -
+2024-09-22 23:14:33,691 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:14:33] "[36mGET /static/css/main.e6c13ad2.css HTTP/1.1[0m" 304 -
+2024-09-22 23:14:33,862 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:14:33] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2024-09-22 23:14:33,960 - EventStorage - INFO - Database connected.
+2024-09-22 23:14:33,973 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:14:33] "[31m[1mGET /api/events?start_time=2024-09-21T22:13:06.844Z&end_time=2024-09-23T22:13:06.844Z HTTP/1.1[0m" 415 -
+2024-09-22 23:14:33,968 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:14:33] "[36mGET /manifest.json HTTP/1.1[0m" 304 -
+2024-09-22 23:14:34,076 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:14:34] "[36mGET /logo192.png HTTP/1.1[0m" 304 -
+2024-09-22 23:21:34,607 - Alog - INFO - Building frontend...
+2024-09-22 23:21:34,607 - Alog - INFO - Frontend already built.
+2024-09-22 23:21:34,608 - absl - INFO - Using /tmp/tfhub_modules to cache modules.
+2024-09-22 23:21:34,611 - absl - INFO - Downloading TF-Hub Module 'https://tfhub.dev/google/yamnet/1'.
+2024-09-22 23:21:34,617 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.7:5000
+2024-09-22 23:21:34,617 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-22 23:21:44,622 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:21:44] "GET / HTTP/1.1" 200 -
+2024-09-22 23:21:44,783 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:21:44] "GET /static/js/main.becf57f0.js HTTP/1.1" 200 -
+2024-09-22 23:21:45,174 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:21:45] "GET /static/css/main.e6c13ad2.css HTTP/1.1" 200 -
+2024-09-22 23:21:45,567 - EventStorage - INFO - Database connected.
+2024-09-22 23:21:45,575 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:21:45] "[31m[1mGET /api/events?start_time=2024-09-21T22:20:18.326Z&end_time=2024-09-23T22:20:18.327Z HTTP/1.1[0m" 415 -
+2024-09-22 23:21:45,590 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:21:45] "GET /favicon.ico HTTP/1.1" 200 -
+2024-09-22 23:21:45,690 - absl - INFO - Downloaded https://tfhub.dev/google/yamnet/1, Total size: 17.43MB
+2024-09-22 23:21:45,691 - absl - INFO - Downloaded TF-Hub Module 'https://tfhub.dev/google/yamnet/1'.
+2024-09-22 23:21:45,764 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:21:45] "[36mGET /manifest.json HTTP/1.1[0m" 304 -
+2024-09-22 23:21:45,792 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:21:45] "GET /favicon.ico HTTP/1.1" 200 -
+2024-09-22 23:21:45,832 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:21:45] "[36mGET /logo192.png HTTP/1.1[0m" 304 -
+2024-09-22 23:21:54,220 - absl - INFO - Fingerprint not found. Saved model loading will continue.
+2024-09-22 23:21:54,246 - EventStorage - INFO - Database connected.
+2024-09-22 23:21:54,246 - SoundClassifier - INFO - YAMNet model loaded successfully.
+2024-09-22 23:21:54,247 - SpeechRecognizer - ERROR - Failed to load Vosk models: Failed to create a model
+2024-09-22 23:21:54,278 - AudioCapture - INFO - Audio stream started.
+2024-09-22 23:23:19,075 - Alog - INFO - Building frontend...
+2024-09-22 23:23:19,075 - Alog - INFO - Frontend already built.
+2024-09-22 23:23:19,076 - absl - INFO - Using /tmp/tfhub_modules to cache modules.
+2024-09-22 23:23:19,117 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.7:5000
+2024-09-22 23:23:19,128 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-22 23:23:27,428 - absl - INFO - Fingerprint not found. Saved model loading will continue.
+2024-09-22 23:23:27,454 - EventStorage - INFO - Database connected.
+2024-09-22 23:23:27,454 - SoundClassifier - INFO - YAMNet model loaded successfully.
+2024-09-22 23:23:27,455 - SpeechRecognizer - ERROR - Failed to load Vosk models: Failed to create a model
+2024-09-22 23:23:27,463 - AudioCapture - INFO - Audio stream started.
+2024-09-22 23:24:00,247 - pydub.converter - DEBUG - subprocess.call(['ffmpeg', '-y', '-f', 'wav', '-i', '/tmp/tmpxygu7h51', '-b:a', '64k', '-f', 'mp3', '/tmp/tmpryvkj_6z'])
+2024-09-22 23:24:00,683 - pydub.converter - DEBUG - subprocess output: b'ffmpeg version 4.2.7-0ubuntu0.1 Copyright (c) 2000-2022 the FFmpeg developers'
+2024-09-22 23:24:00,683 - pydub.converter - DEBUG - subprocess output: b'  built with gcc 9 (Ubuntu 9.4.0-1ubuntu1~20.04.1)'
+2024-09-22 23:24:00,683 - pydub.converter - DEBUG - subprocess output: b'  configuration: --prefix=/usr --extra-version=0ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/aarch64-linux-gnu --incdir=/usr/include/aarch64-linux-gnu --arch=arm64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared'
+2024-09-22 23:24:00,683 - pydub.converter - DEBUG - subprocess output: b'  libavutil      56. 31.100 / 56. 31.100'
+2024-09-22 23:24:00,684 - pydub.converter - DEBUG - subprocess output: b'  libavcodec     58. 54.100 / 58. 54.100'
+2024-09-22 23:24:00,684 - pydub.converter - DEBUG - subprocess output: b'  libavformat    58. 29.100 / 58. 29.100'
+2024-09-22 23:24:00,684 - pydub.converter - DEBUG - subprocess output: b'  libavdevice    58.  8.100 / 58.  8.100'
+2024-09-22 23:24:00,684 - pydub.converter - DEBUG - subprocess output: b'  libavfilter     7. 57.100 /  7. 57.100'
+2024-09-22 23:24:00,684 - pydub.converter - DEBUG - subprocess output: b'  libavresample   4.  0.  0 /  4.  0.  0'
+2024-09-22 23:24:00,684 - pydub.converter - DEBUG - subprocess output: b'  libswscale      5.  5.100 /  5.  5.100'
+2024-09-22 23:24:00,684 - pydub.converter - DEBUG - subprocess output: b'  libswresample   3.  5.100 /  3.  5.100'
+2024-09-22 23:24:00,684 - pydub.converter - DEBUG - subprocess output: b'  libpostproc    55.  5.100 / 55.  5.100'
+2024-09-22 23:24:00,684 - pydub.converter - DEBUG - subprocess output: b'Guessed Channel Layout for Input Stream #0.0 : mono'
+2024-09-22 23:24:00,684 - pydub.converter - DEBUG - subprocess output: b"Input #0, wav, from '/tmp/tmpxygu7h51':"
+2024-09-22 23:24:00,685 - pydub.converter - DEBUG - subprocess output: b'  Duration: 00:00:30.00, bitrate: 512 kb/s'
+2024-09-22 23:24:00,685 - pydub.converter - DEBUG - subprocess output: b'    Stream #0:0: Audio: pcm_s32le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s32, 512 kb/s'
+2024-09-22 23:24:00,685 - pydub.converter - DEBUG - subprocess output: b'Stream mapping:'
+2024-09-22 23:24:00,685 - pydub.converter - DEBUG - subprocess output: b'  Stream #0:0 -> #0:0 (pcm_s32le (native) -> mp3 (libmp3lame))'
+2024-09-22 23:24:00,685 - pydub.converter - DEBUG - subprocess output: b'Press [q] to stop, [?] for help'
+2024-09-22 23:24:00,685 - pydub.converter - DEBUG - subprocess output: b"Output #0, mp3, to '/tmp/tmpryvkj_6z':"
+2024-09-22 23:24:00,685 - pydub.converter - DEBUG - subprocess output: b'  Metadata:'
+2024-09-22 23:24:00,685 - pydub.converter - DEBUG - subprocess output: b'    TSSE            : Lavf58.29.100'
+2024-09-22 23:24:00,685 - pydub.converter - DEBUG - subprocess output: b'    Stream #0:0: Audio: mp3 (libmp3lame), 16000 Hz, mono, s32p, 64 kb/s'
+2024-09-22 23:24:00,686 - pydub.converter - DEBUG - subprocess output: b'    Metadata:'
+2024-09-22 23:24:00,686 - pydub.converter - DEBUG - subprocess output: b'      encoder         : Lavc58.54.100 libmp3lame'
+2024-09-22 23:24:00,686 - pydub.converter - DEBUG - subprocess output: b'size=     235kB time=00:00:30.02 bitrate=  64.2kbits/s speed= 110x'
+2024-09-22 23:24:00,686 - pydub.converter - DEBUG - subprocess output: b'video:0kB audio:235kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.138307%'
+2024-09-22 23:24:00,688 - AudioManager - DEBUG - Audio chunk stored: audio_chunks/0e66e3cc-d936-4a02-861e-ab70efd14b77.mp3
+2024-09-22 23:24:01,947 - EventStorage - DEBUG - Event stored: <Event(id=1, type=sound, label=493,/m/07s12q4,Crunch)>
+2024-09-22 23:24:01,947 - SoundClassifier - INFO - Sound Event: <Event(id=1, type=sound, label=493,/m/07s12q4,Crunch)>
+2024-09-22 23:24:01,956 - EventStorage - DEBUG - Event stored: <Event(id=2, type=sound, label=379,/m/0c2wf,Typewriter)>
+2024-09-22 23:24:01,957 - SoundClassifier - INFO - Sound Event: <Event(id=2, type=sound, label=379,/m/0c2wf,Typewriter)>
+2024-09-22 23:24:01,964 - EventStorage - DEBUG - Event stored: <Event(id=3, type=sound, label=484,/m/07p9k1k,Sizzle)>
+2024-09-22 23:24:01,965 - SoundClassifier - INFO - Sound Event: <Event(id=3, type=sound, label=484,/m/07p9k1k,Sizzle)>
+2024-09-22 23:24:01,972 - EventStorage - DEBUG - Event stored: <Event(id=4, type=sound, label=377,/m/05rj2,Shuffling cards)>
+2024-09-22 23:24:01,973 - SoundClassifier - INFO - Sound Event: <Event(id=4, type=sound, label=377,/m/05rj2,Shuffling cards)>
+2024-09-22 23:24:01,981 - EventStorage - DEBUG - Event stored: <Event(id=5, type=sound, label=499,/m/07pt_g0,Pulse)>
+2024-09-22 23:24:01,981 - SoundClassifier - INFO - Sound Event: <Event(id=5, type=sound, label=499,/m/07pt_g0,Pulse)>
+2024-09-22 23:24:01,993 - SpeechRecognizer - ERROR - Speech recognition failed: 'SpeechRecognizer' object has no attribute 'models'
+2024-09-22 23:24:01,994 - Alog - INFO - Processed audio chunk: 0e66e3cc-d936-4a02-861e-ab70efd14b77
+2024-09-22 23:24:29,370 - pydub.converter - DEBUG - subprocess.call(['ffmpeg', '-y', '-f', 'wav', '-i', '/tmp/tmph1q1xgs5', '-b:a', '64k', '-f', 'mp3', '/tmp/tmpyac4ljz1'])
+2024-09-22 23:24:29,803 - pydub.converter - DEBUG - subprocess output: b'ffmpeg version 4.2.7-0ubuntu0.1 Copyright (c) 2000-2022 the FFmpeg developers'
+2024-09-22 23:24:29,804 - pydub.converter - DEBUG - subprocess output: b'  built with gcc 9 (Ubuntu 9.4.0-1ubuntu1~20.04.1)'
+2024-09-22 23:24:29,804 - pydub.converter - DEBUG - subprocess output: b'  configuration: --prefix=/usr --extra-version=0ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/aarch64-linux-gnu --incdir=/usr/include/aarch64-linux-gnu --arch=arm64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared'
+2024-09-22 23:24:29,804 - pydub.converter - DEBUG - subprocess output: b'  libavutil      56. 31.100 / 56. 31.100'
+2024-09-22 23:24:29,804 - pydub.converter - DEBUG - subprocess output: b'  libavcodec     58. 54.100 / 58. 54.100'
+2024-09-22 23:24:29,804 - pydub.converter - DEBUG - subprocess output: b'  libavformat    58. 29.100 / 58. 29.100'
+2024-09-22 23:24:29,804 - pydub.converter - DEBUG - subprocess output: b'  libavdevice    58.  8.100 / 58.  8.100'
+2024-09-22 23:24:29,804 - pydub.converter - DEBUG - subprocess output: b'  libavfilter     7. 57.100 /  7. 57.100'
+2024-09-22 23:24:29,804 - pydub.converter - DEBUG - subprocess output: b'  libavresample   4.  0.  0 /  4.  0.  0'
+2024-09-22 23:24:29,805 - pydub.converter - DEBUG - subprocess output: b'  libswscale      5.  5.100 /  5.  5.100'
+2024-09-22 23:24:29,805 - pydub.converter - DEBUG - subprocess output: b'  libswresample   3.  5.100 /  3.  5.100'
+2024-09-22 23:24:29,805 - pydub.converter - DEBUG - subprocess output: b'  libpostproc    55.  5.100 / 55.  5.100'
+2024-09-22 23:24:29,805 - pydub.converter - DEBUG - subprocess output: b'Guessed Channel Layout for Input Stream #0.0 : mono'
+2024-09-22 23:24:29,805 - pydub.converter - DEBUG - subprocess output: b"Input #0, wav, from '/tmp/tmph1q1xgs5':"
+2024-09-22 23:24:29,805 - pydub.converter - DEBUG - subprocess output: b'  Duration: 00:00:30.00, bitrate: 512 kb/s'
+2024-09-22 23:24:29,805 - pydub.converter - DEBUG - subprocess output: b'    Stream #0:0: Audio: pcm_s32le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s32, 512 kb/s'
+2024-09-22 23:24:29,805 - pydub.converter - DEBUG - subprocess output: b'Stream mapping:'
+2024-09-22 23:24:29,805 - pydub.converter - DEBUG - subprocess output: b'  Stream #0:0 -> #0:0 (pcm_s32le (native) -> mp3 (libmp3lame))'
+2024-09-22 23:24:29,805 - pydub.converter - DEBUG - subprocess output: b'Press [q] to stop, [?] for help'
+2024-09-22 23:24:29,806 - pydub.converter - DEBUG - subprocess output: b"Output #0, mp3, to '/tmp/tmpyac4ljz1':"
+2024-09-22 23:24:29,806 - pydub.converter - DEBUG - subprocess output: b'  Metadata:'
+2024-09-22 23:24:29,806 - pydub.converter - DEBUG - subprocess output: b'    TSSE            : Lavf58.29.100'
+2024-09-22 23:24:29,806 - pydub.converter - DEBUG - subprocess output: b'    Stream #0:0: Audio: mp3 (libmp3lame), 16000 Hz, mono, s32p, 64 kb/s'
+2024-09-22 23:24:29,806 - pydub.converter - DEBUG - subprocess output: b'    Metadata:'
+2024-09-22 23:24:29,806 - pydub.converter - DEBUG - subprocess output: b'      encoder         : Lavc58.54.100 libmp3lame'
+2024-09-22 23:24:29,806 - pydub.converter - DEBUG - subprocess output: b'size=     235kB time=00:00:30.02 bitrate=  64.2kbits/s speed= 118x'
+2024-09-22 23:24:29,806 - pydub.converter - DEBUG - subprocess output: b'video:0kB audio:235kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.138307%'
+2024-09-22 23:24:29,808 - AudioManager - DEBUG - Audio chunk stored: audio_chunks/7b4bab79-aaf1-42a4-bda2-ec2f6b9dcb24.mp3
+2024-09-22 23:24:30,441 - EventStorage - DEBUG - Event stored: <Event(id=6, type=sound, label=493,/m/07s12q4,Crunch)>
+2024-09-22 23:24:30,442 - SoundClassifier - INFO - Sound Event: <Event(id=6, type=sound, label=493,/m/07s12q4,Crunch)>
+2024-09-22 23:24:30,456 - EventStorage - DEBUG - Event stored: <Event(id=7, type=sound, label=377,/m/05rj2,Shuffling cards)>
+2024-09-22 23:24:30,456 - SoundClassifier - INFO - Sound Event: <Event(id=7, type=sound, label=377,/m/05rj2,Shuffling cards)>
+2024-09-22 23:24:30,464 - EventStorage - DEBUG - Event stored: <Event(id=8, type=sound, label=499,/m/07pt_g0,Pulse)>
+2024-09-22 23:24:30,464 - SoundClassifier - INFO - Sound Event: <Event(id=8, type=sound, label=499,/m/07pt_g0,Pulse)>
+2024-09-22 23:24:30,472 - EventStorage - DEBUG - Event stored: <Event(id=9, type=sound, label=379,/m/0c2wf,Typewriter)>
+2024-09-22 23:24:30,473 - SoundClassifier - INFO - Sound Event: <Event(id=9, type=sound, label=379,/m/0c2wf,Typewriter)>
+2024-09-22 23:24:30,481 - EventStorage - DEBUG - Event stored: <Event(id=10, type=sound, label=484,/m/07p9k1k,Sizzle)>
+2024-09-22 23:24:30,482 - SoundClassifier - INFO - Sound Event: <Event(id=10, type=sound, label=484,/m/07p9k1k,Sizzle)>
+2024-09-22 23:24:30,487 - SpeechRecognizer - ERROR - Speech recognition failed: 'SpeechRecognizer' object has no attribute 'models'
+2024-09-22 23:24:30,487 - Alog - INFO - Processed audio chunk: 7b4bab79-aaf1-42a4-bda2-ec2f6b9dcb24
+2024-09-22 23:25:28,239 - Alog - INFO - Building frontend...
+2024-09-22 23:25:28,240 - Alog - INFO - Frontend already built.
+2024-09-22 23:25:28,241 - absl - INFO - Using /tmp/tfhub_modules to cache modules.
+2024-09-22 23:25:28,282 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.7:5000
+2024-09-22 23:25:28,293 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-22 23:25:36,910 - absl - INFO - Fingerprint not found. Saved model loading will continue.
+2024-09-22 23:25:36,937 - EventStorage - INFO - Database connected.
+2024-09-22 23:25:36,938 - SoundClassifier - INFO - YAMNet model loaded successfully.
+2024-09-22 23:25:39,591 - EventStorage - INFO - Database connected.
+2024-09-22 23:25:39,592 - SpeechRecognizer - INFO - Vosk models loaded successfully.
+2024-09-22 23:25:39,622 - AudioCapture - INFO - Audio stream started.
+2024-09-22 23:26:12,409 - pydub.converter - DEBUG - subprocess.call(['ffmpeg', '-y', '-f', 'wav', '-i', '/tmp/tmp84j1oxj0', '-b:a', '64k', '-f', 'mp3', '/tmp/tmp0om1vvgd'])
+2024-09-22 23:26:13,304 - pydub.converter - DEBUG - subprocess output: b'ffmpeg version 4.2.7-0ubuntu0.1 Copyright (c) 2000-2022 the FFmpeg developers'
+2024-09-22 23:26:13,306 - pydub.converter - DEBUG - subprocess output: b'  built with gcc 9 (Ubuntu 9.4.0-1ubuntu1~20.04.1)'
+2024-09-22 23:26:13,307 - pydub.converter - DEBUG - subprocess output: b'  configuration: --prefix=/usr --extra-version=0ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/aarch64-linux-gnu --incdir=/usr/include/aarch64-linux-gnu --arch=arm64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared'
+2024-09-22 23:26:13,307 - pydub.converter - DEBUG - subprocess output: b'  libavutil      56. 31.100 / 56. 31.100'
+2024-09-22 23:26:13,308 - pydub.converter - DEBUG - subprocess output: b'  libavcodec     58. 54.100 / 58. 54.100'
+2024-09-22 23:26:13,308 - pydub.converter - DEBUG - subprocess output: b'  libavformat    58. 29.100 / 58. 29.100'
+2024-09-22 23:26:13,309 - pydub.converter - DEBUG - subprocess output: b'  libavdevice    58.  8.100 / 58.  8.100'
+2024-09-22 23:26:13,309 - pydub.converter - DEBUG - subprocess output: b'  libavfilter     7. 57.100 /  7. 57.100'
+2024-09-22 23:26:13,309 - pydub.converter - DEBUG - subprocess output: b'  libavresample   4.  0.  0 /  4.  0.  0'
+2024-09-22 23:26:13,312 - pydub.converter - DEBUG - subprocess output: b'  libswscale      5.  5.100 /  5.  5.100'
+2024-09-22 23:26:13,313 - pydub.converter - DEBUG - subprocess output: b'  libswresample   3.  5.100 /  3.  5.100'
+2024-09-22 23:26:13,314 - pydub.converter - DEBUG - subprocess output: b'  libpostproc    55.  5.100 / 55.  5.100'
+2024-09-22 23:26:13,319 - pydub.converter - DEBUG - subprocess output: b'Guessed Channel Layout for Input Stream #0.0 : mono'
+2024-09-22 23:26:13,321 - pydub.converter - DEBUG - subprocess output: b"Input #0, wav, from '/tmp/tmp84j1oxj0':"
+2024-09-22 23:26:13,322 - pydub.converter - DEBUG - subprocess output: b'  Duration: 00:00:30.00, bitrate: 512 kb/s'
+2024-09-22 23:26:13,324 - pydub.converter - DEBUG - subprocess output: b'    Stream #0:0: Audio: pcm_s32le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s32, 512 kb/s'
+2024-09-22 23:26:13,324 - pydub.converter - DEBUG - subprocess output: b'Stream mapping:'
+2024-09-22 23:26:13,326 - pydub.converter - DEBUG - subprocess output: b'  Stream #0:0 -> #0:0 (pcm_s32le (native) -> mp3 (libmp3lame))'
+2024-09-22 23:26:13,328 - pydub.converter - DEBUG - subprocess output: b'Press [q] to stop, [?] for help'
+2024-09-22 23:26:13,328 - pydub.converter - DEBUG - subprocess output: b"Output #0, mp3, to '/tmp/tmp0om1vvgd':"
+2024-09-22 23:26:13,329 - pydub.converter - DEBUG - subprocess output: b'  Metadata:'
+2024-09-22 23:26:13,330 - pydub.converter - DEBUG - subprocess output: b'    TSSE            : Lavf58.29.100'
+2024-09-22 23:26:13,331 - pydub.converter - DEBUG - subprocess output: b'    Stream #0:0: Audio: mp3 (libmp3lame), 16000 Hz, mono, s32p, 64 kb/s'
+2024-09-22 23:26:13,332 - pydub.converter - DEBUG - subprocess output: b'    Metadata:'
+2024-09-22 23:26:13,334 - pydub.converter - DEBUG - subprocess output: b'      encoder         : Lavc58.54.100 libmp3lame'
+2024-09-22 23:26:13,334 - pydub.converter - DEBUG - subprocess output: b'size=     235kB time=00:00:30.02 bitrate=  64.2kbits/s speed= 122x'
+2024-09-22 23:26:13,334 - pydub.converter - DEBUG - subprocess output: b'video:0kB audio:235kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.138307%'
+2024-09-22 23:26:13,339 - AudioManager - DEBUG - Audio chunk stored: audio_chunks/29f0a210-9dad-4df9-a9f3-8449d95a4474.mp3
+2024-09-22 23:26:14,781 - EventStorage - DEBUG - Event stored: <Event(id=11, type=sound, label=index,mid,display_name)>
+2024-09-22 23:26:14,781 - SoundClassifier - INFO - Sound Event: <Event(id=11, type=sound, label=index,mid,display_name)>
+2024-09-22 23:26:14,791 - EventStorage - DEBUG - Event stored: <Event(id=12, type=sound, label=493,/m/07s12q4,Crunch)>
+2024-09-22 23:26:14,792 - SoundClassifier - INFO - Sound Event: <Event(id=12, type=sound, label=493,/m/07s12q4,Crunch)>
+2024-09-22 23:26:14,800 - EventStorage - DEBUG - Event stored: <Event(id=13, type=sound, label=58,/m/0l15bq,Clapping)>
+2024-09-22 23:26:14,800 - SoundClassifier - INFO - Sound Event: <Event(id=13, type=sound, label=58,/m/0l15bq,Clapping)>
+2024-09-22 23:26:14,809 - EventStorage - DEBUG - Event stored: <Event(id=14, type=sound, label=499,/m/07pt_g0,Pulse)>
+2024-09-22 23:26:14,810 - SoundClassifier - INFO - Sound Event: <Event(id=14, type=sound, label=499,/m/07pt_g0,Pulse)>
+2024-09-22 23:26:14,818 - EventStorage - DEBUG - Event stored: <Event(id=15, type=sound, label=515,/m/0cj0r,Pink noise)>
+2024-09-22 23:26:14,819 - SoundClassifier - INFO - Sound Event: <Event(id=15, type=sound, label=515,/m/0cj0r,Pink noise)>
+2024-09-22 23:26:23,148 - EventStorage - DEBUG - Event stored: <Event(id=16, type=speech, label=oh oh oh oh dust two or three one two three four five six seven eight nine ten twelve eleven one two three four five six seven eight nine ten words you free four five six seven eight weren't and eleven)>
+2024-09-22 23:26:23,149 - SpeechRecognizer - INFO - Speech Event: <Event(id=16, type=speech, label=oh oh oh oh dust two or three one two three four five six seven eight nine ten twelve eleven one two three four five six seven eight nine ten words you free four five six seven eight weren't and eleven)>
+2024-09-22 23:26:23,215 - Alog - INFO - Processed audio chunk: 29f0a210-9dad-4df9-a9f3-8449d95a4474
+2024-09-22 23:26:49,043 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:26:49] "[36mGET / HTTP/1.1[0m" 304 -
+2024-09-22 23:26:49,130 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:26:49] "[36mGET /static/js/main.becf57f0.js HTTP/1.1[0m" 304 -
+2024-09-22 23:26:49,224 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:26:49] "[36mGET /static/css/main.e6c13ad2.css HTTP/1.1[0m" 304 -
+2024-09-22 23:26:49,447 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:26:49] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2024-09-22 23:26:49,531 - EventStorage - INFO - Database connected.
+2024-09-22 23:26:49,537 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:26:49] "[31m[1mGET /api/events?start_time=2024-09-21T22:25:22.434Z&end_time=2024-09-23T22:25:22.434Z HTTP/1.1[0m" 415 -
+2024-09-22 23:26:49,914 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:26:49] "[36mGET /manifest.json HTTP/1.1[0m" 304 -
+2024-09-22 23:26:50,076 - werkzeug - INFO - 127.0.0.1 - - [22/Sep/2024 23:26:50] "[36mGET /logo192.png HTTP/1.1[0m" 304 -
+2024-09-22 23:51:10,620 - Alog                 - INFO     - Building frontend...
+2024-09-22 23:51:10,621 - Alog                 - INFO     - Frontend already built.
+2024-09-22 23:51:10,702 - SoundClassifier      - ERROR    - Failed to load YAMNet model: No file or directory found at models/yamnet.h5
+2024-09-22 23:51:13,257 - EventStorage         - INFO     - Database connected.
+2024-09-22 23:51:13,257 - SpeechRecognizer     - INFO     - Vosk models loaded successfully.
+2024-09-22 23:52:23,520 - Alog                 - INFO     - Building frontend...
+2024-09-22 23:52:23,521 - Alog                 - INFO     - Frontend already built.
+2024-09-22 23:52:23,581 - SoundClassifier      - ERROR    - Failed to load YAMNet model: No file or directory found at models/yamnet.h5
+2024-09-22 23:52:26,365 - EventStorage         - INFO     - Database connected.
+2024-09-22 23:52:26,366 - SpeechRecognizer     - INFO     - Vosk models loaded successfully.
+2024-09-22 23:52:26,374 - AudioCapture         - INFO     - Audio stream started.
+2024-09-22 23:53:00,132 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/4819ed11-c906-43c3-aedc-b9da4d76b7e8.mp3
+2024-09-22 23:53:00,175 - Alog                 - INFO     - Processed audio chunk: 4819ed11-c906-43c3-aedc-b9da4d76b7e8
+2024-09-22 23:53:00,208 - SoundClassifier      - ERROR    - Sound classification failed: 'SoundClassifier' object has no attribute 'model'
+2024-09-22 23:53:11,814 - EventStorage         - DEBUG    - Event stored: <Event(id=17, type=speech, label=so it's it's it's species to it's it's it's beats beats)>
+2024-09-22 23:53:11,825 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=17, type=speech, label=so it's it's it's species to it's it's it's beats beats)>
+2024-09-22 23:53:28,846 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/1bfac09b-2c22-45c9-bab7-d270ebe741b9.mp3
+2024-09-22 23:53:28,889 - Alog                 - INFO     - Processed audio chunk: 1bfac09b-2c22-45c9-bab7-d270ebe741b9
+2024-09-22 23:53:28,895 - SoundClassifier      - ERROR    - Sound classification failed: 'SoundClassifier' object has no attribute 'model'
+2024-09-22 23:53:39,918 - EventStorage         - DEBUG    - Event stored: <Event(id=18, type=speech, label=that's just the be the the and the dead beats beats beats one one one two three)>
+2024-09-22 23:53:39,929 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=18, type=speech, label=that's just the be the the and the dead beats beats beats one one one two three)>
+2024-09-22 23:53:57,997 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/d77cf298-ea87-480c-8008-c12f137ab4a4.mp3
+2024-09-22 23:53:58,038 - Alog                 - INFO     - Processed audio chunk: d77cf298-ea87-480c-8008-c12f137ab4a4
+2024-09-22 23:53:58,054 - SoundClassifier      - ERROR    - Sound classification failed: 'SoundClassifier' object has no attribute 'model'
+2024-09-22 23:54:07,085 - EventStorage         - DEBUG    - Event stored: <Event(id=19, type=speech, label=one one one three or four on been to turn turn turn turn turn turn turn after)>
+2024-09-22 23:54:07,095 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=19, type=speech, label=one one one three or four on been to turn turn turn turn turn turn turn after)>
+2024-09-22 23:54:27,121 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/3c3aafb8-569d-4aba-9f16-ac30b440f3ae.mp3
+2024-09-22 23:54:27,169 - SoundClassifier      - ERROR    - Sound classification failed: 'SoundClassifier' object has no attribute 'model'
+2024-09-22 23:54:27,186 - Alog                 - INFO     - Processed audio chunk: 3c3aafb8-569d-4aba-9f16-ac30b440f3ae
+2024-09-22 23:54:30,685 - EventStorage         - DEBUG    - Event stored: <Event(id=20, type=speech, label=huh)>
+2024-09-22 23:54:30,696 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=20, type=speech, label=huh)>
+2024-09-22 23:54:59,882 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/41b4d5ad-5f94-474d-bc86-2014df4de183.mp3
+2024-09-22 23:54:59,923 - Alog                 - INFO     - Processed audio chunk: 41b4d5ad-5f94-474d-bc86-2014df4de183
+2024-09-22 23:54:59,935 - SoundClassifier      - ERROR    - Sound classification failed: 'SoundClassifier' object has no attribute 'model'
+2024-09-22 23:55:03,862 - EventStorage         - DEBUG    - Event stored: <Event(id=21, type=speech, label=)>
+2024-09-22 23:55:03,873 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=21, type=speech, label=)>
+2024-09-22 23:55:29,023 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/3a5ea0ea-e24b-402c-ab13-d78dde4b1180.mp3
+2024-09-22 23:55:29,067 - SoundClassifier      - ERROR    - Sound classification failed: 'SoundClassifier' object has no attribute 'model'
+2024-09-22 23:55:29,072 - Alog                 - INFO     - Processed audio chunk: 3a5ea0ea-e24b-402c-ab13-d78dde4b1180
+2024-09-22 23:55:32,755 - EventStorage         - DEBUG    - Event stored: <Event(id=22, type=speech, label=huh)>
+2024-09-22 23:55:32,766 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=22, type=speech, label=huh)>
+2024-09-22 23:55:58,160 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/9e58bbdc-302c-4ddf-b22d-682cd36a1c3c.mp3
+2024-09-22 23:55:58,204 - Alog                 - INFO     - Processed audio chunk: 9e58bbdc-302c-4ddf-b22d-682cd36a1c3c
+2024-09-22 23:55:58,210 - SoundClassifier      - ERROR    - Sound classification failed: 'SoundClassifier' object has no attribute 'model'
+2024-09-22 23:56:02,256 - EventStorage         - DEBUG    - Event stored: <Event(id=23, type=speech, label=)>
+2024-09-22 23:56:02,267 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=23, type=speech, label=)>
+2024-09-22 23:56:27,277 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/4a0b14dc-9ab0-4770-b68c-aea07fae8362.mp3
+2024-09-22 23:56:27,318 - Alog                 - INFO     - Processed audio chunk: 4a0b14dc-9ab0-4770-b68c-aea07fae8362
+2024-09-22 23:56:27,342 - SoundClassifier      - ERROR    - Sound classification failed: 'SoundClassifier' object has no attribute 'model'
+2024-09-22 23:56:30,965 - EventStorage         - DEBUG    - Event stored: <Event(id=24, type=speech, label=huh)>
+2024-09-22 23:56:30,976 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=24, type=speech, label=huh)>
+2024-09-23 00:29:37,905 - Alog                 - INFO     - Building frontend...
+2024-09-23 00:29:37,906 - Alog                 - INFO     - Frontend already built.
+2024-09-23 00:29:37,930 - EventStorage         - INFO     - Database connected.
+2024-09-23 00:29:37,931 - SoundClassifier      - INFO     - YAMNet TFLite model loaded successfully.
+2024-09-23 00:29:40,541 - EventStorage         - INFO     - Database connected.
+2024-09-23 00:29:40,542 - SpeechRecognizer     - INFO     - Vosk models loaded successfully.
+2024-09-23 00:29:40,549 - AudioCapture         - INFO     - Audio stream started.
+2024-09-23 00:30:14,139 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/46010b90-6383-43a5-9b8a-4492a327b598.mp3
+2024-09-23 00:30:14,166 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:14,184 - Alog                 - INFO     - Processed audio chunk: 46010b90-6383-43a5-9b8a-4492a327b598
+2024-09-23 00:30:14,245 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:14,557 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/b7f2bcda-550a-4141-a136-5626b8e209fc.mp3
+2024-09-23 00:30:14,584 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:14,595 - Alog                 - INFO     - Processed audio chunk: b7f2bcda-550a-4141-a136-5626b8e209fc
+2024-09-23 00:30:14,670 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:14,945 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/94de7925-f738-4bb9-b8ba-593612c2ef35.mp3
+2024-09-23 00:30:14,972 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:14,978 - Alog                 - INFO     - Processed audio chunk: 94de7925-f738-4bb9-b8ba-593612c2ef35
+2024-09-23 00:30:15,077 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:15,292 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/f35a9fd8-ccb2-42fb-bda6-c263f712f0a6.mp3
+2024-09-23 00:30:15,320 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:15,331 - Alog                 - INFO     - Processed audio chunk: f35a9fd8-ccb2-42fb-bda6-c263f712f0a6
+2024-09-23 00:30:15,418 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:15,636 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/e29136b4-860a-4892-8538-eb859223864e.mp3
+2024-09-23 00:30:15,663 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:15,669 - Alog                 - INFO     - Processed audio chunk: e29136b4-860a-4892-8538-eb859223864e
+2024-09-23 00:30:15,723 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:16,032 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/5e9ce4ed-9154-43e3-9595-caf4c8c66fc6.mp3
+2024-09-23 00:30:16,060 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:16,071 - Alog                 - INFO     - Processed audio chunk: 5e9ce4ed-9154-43e3-9595-caf4c8c66fc6
+2024-09-23 00:30:16,109 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:16,418 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/0531c650-a954-43d5-8c4f-271fdb3b997b.mp3
+2024-09-23 00:30:16,446 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:16,462 - Alog                 - INFO     - Processed audio chunk: 0531c650-a954-43d5-8c4f-271fdb3b997b
+2024-09-23 00:30:16,540 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:16,785 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/e70b1783-dc64-47a0-900c-c747a3a01052.mp3
+2024-09-23 00:30:16,819 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:16,824 - Alog                 - INFO     - Processed audio chunk: e70b1783-dc64-47a0-900c-c747a3a01052
+2024-09-23 00:30:16,864 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:17,147 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/0b675e1a-d549-46af-9d6e-a1e3ee120728.mp3
+2024-09-23 00:30:17,180 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:17,185 - Alog                 - INFO     - Processed audio chunk: 0b675e1a-d549-46af-9d6e-a1e3ee120728
+2024-09-23 00:30:17,235 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:17,528 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/e863a2b9-6978-4554-ab64-42305758e3c2.mp3
+2024-09-23 00:30:17,556 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:17,567 - Alog                 - INFO     - Processed audio chunk: e863a2b9-6978-4554-ab64-42305758e3c2
+2024-09-23 00:30:17,600 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:17,939 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/3391c83b-941f-4853-bfab-ecf9d4ce45bf.mp3
+2024-09-23 00:30:17,967 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:17,983 - Alog                 - INFO     - Processed audio chunk: 3391c83b-941f-4853-bfab-ecf9d4ce45bf
+2024-09-23 00:30:18,026 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:18,341 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/585071c7-2804-4512-8cb9-7ba7dabcef48.mp3
+2024-09-23 00:30:18,374 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:18,384 - Alog                 - INFO     - Processed audio chunk: 585071c7-2804-4512-8cb9-7ba7dabcef48
+2024-09-23 00:30:18,427 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:18,750 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/f872c016-7241-4be7-90b3-aa5e5b4d6517.mp3
+2024-09-23 00:30:18,783 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:18,789 - Alog                 - INFO     - Processed audio chunk: f872c016-7241-4be7-90b3-aa5e5b4d6517
+2024-09-23 00:30:18,848 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:30:19,141 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/8bfc3e7f-4dfc-45fb-8b43-397a07c01a82.mp3
+2024-09-23 00:30:19,169 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:30:19,179 - Alog                 - INFO     - Processed audio chunk: 8bfc3e7f-4dfc-45fb-8b43-397a07c01a82
+2024-09-23 00:30:19,217 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:34:29,247 - Alog                 - INFO     - Building frontend...
+2024-09-23 00:34:29,248 - Alog                 - INFO     - Frontend already built.
+2024-09-23 00:34:42,374 - Alog                 - INFO     - Building frontend...
+2024-09-23 00:34:42,375 - Alog                 - INFO     - Frontend already built.
+2024-09-23 00:34:42,386 - EventStorage         - INFO     - Database connected.
+2024-09-23 00:34:42,387 - SoundClassifier      - INFO     - YAMNet TFLite model loaded successfully.
+2024-09-23 00:34:44,845 - EventStorage         - INFO     - Database connected.
+2024-09-23 00:34:44,846 - SpeechRecognizer     - INFO     - Vosk models loaded successfully.
+2024-09-23 00:34:44,869 - AudioCapture         - INFO     - Audio stream started.
+2024-09-23 00:35:18,202 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/a95326f8-2c9e-400f-86fc-1a30f299ef69.mp3
+2024-09-23 00:35:18,230 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:35:18,235 - Alog                 - INFO     - Processed audio chunk: a95326f8-2c9e-400f-86fc-1a30f299ef69
+2024-09-23 00:35:18,331 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:35:18,529 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/73cc32cc-0d7e-4e1d-879b-dc37d02ab31f.mp3
+2024-09-23 00:35:18,568 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:35:18,579 - Alog                 - INFO     - Processed audio chunk: 73cc32cc-0d7e-4e1d-879b-dc37d02ab31f
+2024-09-23 00:35:18,606 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:35:18,928 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/8dd6293d-6598-4a09-8fd6-bfbe58641e84.mp3
+2024-09-23 00:35:18,971 - Alog                 - INFO     - Processed audio chunk: 8dd6293d-6598-4a09-8fd6-bfbe58641e84
+2024-09-23 00:35:19,007 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:35:19,223 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/44a20dc1-9675-429e-89c7-87d3d5f7b2e0.mp3
+2024-09-23 00:35:19,241 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:35:19,252 - Alog                 - INFO     - Processed audio chunk: 44a20dc1-9675-429e-89c7-87d3d5f7b2e0
+2024-09-23 00:35:19,481 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/51683876-c87e-48b6-abad-28001f469b9b.mp3
+2024-09-23 00:35:19,499 - Alog                 - INFO     - Processed audio chunk: 51683876-c87e-48b6-abad-28001f469b9b
+2024-09-23 00:35:19,521 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:35:19,806 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/7af65661-1a47-490e-bc23-fa2222bfae2f.mp3
+2024-09-23 00:35:19,854 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:35:19,868 - Alog                 - INFO     - Processed audio chunk: 7af65661-1a47-490e-bc23-fa2222bfae2f
+2024-09-23 00:35:19,882 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:35:20,418 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/4952a137-3658-42d1-b6e0-ec5c300c4c35.mp3
+2024-09-23 00:35:20,433 - Alog                 - INFO     - Processed audio chunk: 4952a137-3658-42d1-b6e0-ec5c300c4c35
+2024-09-23 00:35:20,436 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:35:20,683 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/51261f85-1954-491b-955a-8afd48d31fd1.mp3
+2024-09-23 00:35:20,719 - Alog                 - INFO     - Processed audio chunk: 51261f85-1954-491b-955a-8afd48d31fd1
+2024-09-23 00:35:20,779 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:35:21,037 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/c738e925-8203-4659-8b4e-bbe10cfadb05.mp3
+2024-09-23 00:35:21,067 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:35:21,076 - Alog                 - INFO     - Processed audio chunk: c738e925-8203-4659-8b4e-bbe10cfadb05
+2024-09-23 00:35:21,303 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/bf45db78-7d82-4de5-a88d-2df6f5946e9c.mp3
+2024-09-23 00:35:21,326 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:35:21,328 - Alog                 - INFO     - Processed audio chunk: bf45db78-7d82-4de5-a88d-2df6f5946e9c
+2024-09-23 00:35:21,334 - SoundClassifier      - ERROR    - Sound classification failed: /tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke./tensorflow/tensorflow/lite/kernels/pad.cc:79 SizeOfDimension(op_context->paddings, 0) != op_context->dims (1 != 2)Node number 15 (PAD) failed to invoke.
+2024-09-23 00:45:22,591 - Alog                 - INFO     - Building frontend...
+2024-09-23 00:45:22,592 - Alog                 - INFO     - Frontend already built.
+2024-09-23 00:45:33,070 - EventStorage         - INFO     - Database connected.
+2024-09-23 00:45:33,071 - SoundClassifier      - INFO     - YAMNet model loaded successfully.
+2024-09-23 00:45:36,499 - EventStorage         - INFO     - Database connected.
+2024-09-23 00:45:36,502 - SpeechRecognizer     - INFO     - Vosk models loaded successfully.
+2024-09-23 00:45:36,581 - AudioCapture         - INFO     - Audio stream started.
+2024-09-23 00:45:40,840 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/cfbd430c-2f1f-44c1-b18b-57963e430028.mp3
+2024-09-23 00:45:40,929 - Alog                 - INFO     - Processed audio chunk: cfbd430c-2f1f-44c1-b18b-57963e430028
+2024-09-23 00:45:41,054 - SoundClassifier      - ERROR    - Sound classification failed: '_UserObject' object is not callable
+2024-09-23 00:45:41,065 - Alog                 - ERROR    - Audio stream status: input overflow
+2024-09-23 00:45:42,241 - EventStorage         - DEBUG    - Event stored: <Event(id=25, type=speech, label=)>
+2024-09-23 00:45:42,259 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=25, type=speech, label=)>
+2024-09-23 00:45:42,864 - Alog                 - ERROR    - Audio stream status: input overflow
+2024-09-23 00:45:43,251 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/abe98e5c-fcda-4172-86a0-a02340fede1d.mp3
+2024-09-23 00:45:43,313 - Alog                 - INFO     - Processed audio chunk: abe98e5c-fcda-4172-86a0-a02340fede1d
+2024-09-23 00:45:43,378 - SoundClassifier      - ERROR    - Sound classification failed: '_UserObject' object is not callable
+2024-09-23 00:45:45,876 - Alog                 - ERROR    - Audio stream status: input overflow
+2024-09-23 00:45:45,951 - EventStorage         - DEBUG    - Event stored: <Event(id=26, type=speech, label=oh couldn't to sell so)>
+2024-09-23 00:45:45,963 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=26, type=speech, label=oh couldn't to sell so)>
+2024-09-23 00:45:46,102 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/94f7d374-4788-40bc-9c17-ce745dc3d784.mp3
+2024-09-23 00:45:46,157 - Alog                 - INFO     - Processed audio chunk: 94f7d374-4788-40bc-9c17-ce745dc3d784
+2024-09-23 00:45:46,202 - SoundClassifier      - ERROR    - Sound classification failed: '_UserObject' object is not callable
+2024-09-23 00:45:47,721 - EventStorage         - DEBUG    - Event stored: <Event(id=27, type=speech, label=dream out just fine)>
+2024-09-23 00:45:47,737 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=27, type=speech, label=dream out just fine)>
+2024-09-23 00:45:48,971 - Alog                 - ERROR    - Audio stream status: input overflow
+2024-09-23 00:45:49,181 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/7f28aeab-4caf-497f-b8e2-d56b2f8c8fb3.mp3
+2024-09-23 00:45:49,226 - Alog                 - INFO     - Processed audio chunk: 7f28aeab-4caf-497f-b8e2-d56b2f8c8fb3
+2024-09-23 00:45:49,275 - SoundClassifier      - ERROR    - Sound classification failed: '_UserObject' object is not callable
+2024-09-23 00:45:52,222 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/0c9c3b6d-2f69-48c8-80d6-bf1992d38a1c.mp3
+2024-09-23 00:45:52,278 - Alog                 - INFO     - Processed audio chunk: 0c9c3b6d-2f69-48c8-80d6-bf1992d38a1c
+2024-09-23 00:45:52,285 - SoundClassifier      - ERROR    - Sound classification failed: '_UserObject' object is not callable
+2024-09-23 00:45:52,322 - EventStorage         - DEBUG    - Event stored: <Event(id=28, type=speech, label=i'll just trim out three)>
+2024-09-23 00:45:52,335 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=28, type=speech, label=i'll just trim out three)>
+2024-09-23 00:45:53,318 - EventStorage         - DEBUG    - Event stored: <Event(id=29, type=speech, label=wow)>
+2024-09-23 00:45:53,335 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=29, type=speech, label=wow)>
+2024-09-23 00:45:55,063 - Alog                 - ERROR    - Audio stream status: input overflow
+2024-09-23 00:45:55,285 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/0f474dc3-a729-4c67-b09b-979cc0a7cca8.mp3
+2024-09-23 00:45:55,366 - Alog                 - INFO     - Processed audio chunk: 0f474dc3-a729-4c67-b09b-979cc0a7cca8
+2024-09-23 00:45:55,395 - SoundClassifier      - ERROR    - Sound classification failed: '_UserObject' object is not callable
+2024-09-23 00:45:56,665 - EventStorage         - DEBUG    - Event stored: <Event(id=30, type=speech, label=)>
+2024-09-23 00:45:56,681 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=30, type=speech, label=)>
+2024-09-23 00:45:58,142 - Alog                 - ERROR    - Audio stream status: input overflow
+2024-09-23 00:45:58,166 - Alog                 - ERROR    - Audio stream status: input overflow
+2024-09-23 00:45:58,410 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/755a18d2-12e8-4817-b5a7-ea9fbb4fc377.mp3
+2024-09-23 00:45:58,488 - SoundClassifier      - ERROR    - Sound classification failed: '_UserObject' object is not callable
+2024-09-23 00:45:58,505 - Alog                 - INFO     - Processed audio chunk: 755a18d2-12e8-4817-b5a7-ea9fbb4fc377
+2024-09-23 00:45:59,633 - EventStorage         - DEBUG    - Event stored: <Event(id=31, type=speech, label=)>
+2024-09-23 00:45:59,639 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=31, type=speech, label=)>
+2024-09-23 00:46:01,293 - Alog                 - ERROR    - Audio stream status: input overflow
+2024-09-23 00:46:01,522 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/0791723d-21bf-4998-9020-7c4129deb7ca.mp3
+2024-09-23 00:46:01,598 - Alog                 - INFO     - Processed audio chunk: 0791723d-21bf-4998-9020-7c4129deb7ca
+2024-09-23 00:46:01,611 - SoundClassifier      - ERROR    - Sound classification failed: '_UserObject' object is not callable
+2024-09-23 00:46:02,833 - EventStorage         - DEBUG    - Event stored: <Event(id=32, type=speech, label=)>
+2024-09-23 00:46:02,851 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=32, type=speech, label=)>
+2024-09-23 00:46:04,353 - Alog                 - ERROR    - Audio stream status: input overflow
+2024-09-23 00:46:04,577 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/98e8ce15-7bf8-4a9e-8eca-4475f65b0d98.mp3
+2024-09-23 00:46:04,606 - Alog                 - DEBUG    - No speech detected.
+2024-09-23 00:46:04,617 - Alog                 - INFO     - Processed audio chunk: 98e8ce15-7bf8-4a9e-8eca-4475f65b0d98
+2024-09-23 00:46:04,706 - SoundClassifier      - ERROR    - Sound classification failed: '_UserObject' object is not callable
+2024-09-23 00:51:59,943 - Alog                 - INFO     - Building frontend...
+2024-09-23 00:51:59,944 - Alog                 - INFO     - Frontend already built.
+2024-09-23 00:52:10,504 - EventStorage         - INFO     - Database connected.
+2024-09-23 00:52:10,505 - SoundClassifier      - INFO     - YAMNet model loaded successfully.
+2024-09-23 00:52:13,222 - EventStorage         - INFO     - Database connected.
+2024-09-23 00:52:13,223 - SpeechRecognizer     - INFO     - Vosk models loaded successfully.
+2024-09-23 00:52:13,285 - AudioCapture         - INFO     - Audio stream started.
+2024-09-23 00:52:18,417 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/0b664217-14ed-4666-824f-3cc5fc9d8858.mp3
+2024-09-23 00:52:18,517 - Alog                 - INFO     - Processed audio chunk: 0b664217-14ed-4666-824f-3cc5fc9d8858
+2024-09-23 00:52:18,697 - SoundClassifier      - ERROR    - Sound classification failed: Binding inputs to tf.function `signature_wrapper_serving_fn` failed due to `missing a required argument: 'input_waveform'`. Received args: () and kwargs: {'waveform': <tf.Tensor: shape=(1, 48000), dtype=float32, numpy=
+array([[0.        , 0.        , 0.        , ..., 0.01285392, 0.00573215,
+        0.0217127 ]], dtype=float32)>} for signature: (*, input_waveform: TensorSpec(shape=(None,), dtype=tf.float32, name='input_waveform')).
+2024-09-23 00:52:20,153 - EventStorage         - DEBUG    - Event stored: <Event(id=33, type=speech, label=oh)>
+2024-09-23 00:52:20,181 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=33, type=speech, label=oh)>
+2024-09-23 00:52:20,621 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/f3c79a8a-b2b8-4230-8e62-db895942962c.mp3
+2024-09-23 00:52:20,702 - Alog                 - INFO     - Processed audio chunk: f3c79a8a-b2b8-4230-8e62-db895942962c
+2024-09-23 00:52:20,799 - SoundClassifier      - ERROR    - Sound classification failed: Binding inputs to tf.function `signature_wrapper_serving_fn` failed due to `missing a required argument: 'input_waveform'`. Received args: () and kwargs: {'waveform': <tf.Tensor: shape=(1, 48000), dtype=float32, numpy=
+array([[ 0.07894737, -0.015625  ,  0.03371711, ...,  0.17653508,
+         0.1946272 ,  0.20148027]], dtype=float32)>} for signature: (*, input_waveform: TensorSpec(shape=(None,), dtype=tf.float32, name='input_waveform')).
+2024-09-23 00:52:22,137 - EventStorage         - DEBUG    - Event stored: <Event(id=34, type=speech, label=dream a start)>
+2024-09-23 00:52:22,150 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=34, type=speech, label=dream a start)>
+2024-09-23 00:52:24,646 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/5a366795-73ab-4d88-8a0f-f09d4ea662e6.mp3
+2024-09-23 00:52:24,698 - Alog                 - INFO     - Processed audio chunk: 5a366795-73ab-4d88-8a0f-f09d4ea662e6
+2024-09-23 00:52:24,826 - SoundClassifier      - ERROR    - Sound classification failed: Binding inputs to tf.function `signature_wrapper_serving_fn` failed due to `missing a required argument: 'input_waveform'`. Received args: () and kwargs: {'waveform': <tf.Tensor: shape=(1, 48000), dtype=float32, numpy=
+array([[ 0.16132979,  0.1688762 ,  0.20171323, ..., -0.00530288,
+        -0.00550683, -0.00591475]], dtype=float32)>} for signature: (*, input_waveform: TensorSpec(shape=(None,), dtype=tf.float32, name='input_waveform')).
+2024-09-23 00:52:26,250 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/7af278da-7607-4245-83fd-1306f53072c1.mp3
+2024-09-23 00:52:26,294 - Alog                 - INFO     - Processed audio chunk: 7af278da-7607-4245-83fd-1306f53072c1
+2024-09-23 00:52:26,406 - SoundClassifier      - ERROR    - Sound classification failed: Binding inputs to tf.function `signature_wrapper_serving_fn` failed due to `missing a required argument: 'input_waveform'`. Received args: () and kwargs: {'waveform': <tf.Tensor: shape=(1, 48000), dtype=float32, numpy=
+array([[-0.03043478, -0.02434783, -0.02782609, ..., -0.05826087,
+        -0.05130435, -0.05043478]], dtype=float32)>} for signature: (*, input_waveform: TensorSpec(shape=(None,), dtype=tf.float32, name='input_waveform')).
+2024-09-23 00:52:26,730 - EventStorage         - DEBUG    - Event stored: <Event(id=35, type=speech, label=there's some speech)>
+2024-09-23 00:52:26,742 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=35, type=speech, label=there's some speech)>
+2024-09-23 00:52:27,971 - EventStorage         - DEBUG    - Event stored: <Event(id=36, type=speech, label=source)>
+2024-09-23 00:52:27,983 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=36, type=speech, label=source)>
+2024-09-23 00:52:30,093 - AudioManager         - ERROR    - Failed to store audio chunk: Encoding failed. ffmpeg/avlib returned error code: 255
+
+Command:['ffmpeg', '-y', '-f', 'wav', '-i', '/tmp/tmpb55x2qp3', '-b:a', '64k', '-f', 'mp3', '/tmp/tmpd154lzcx']
+
+Output from ffmpeg/avlib:
+
+ffmpeg version 4.2.7-0ubuntu0.1 Copyright (c) 2000-2022 the FFmpeg developers
+  built with gcc 9 (Ubuntu 9.4.0-1ubuntu1~20.04.1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/aarch64-linux-gnu --incdir=/usr/include/aarch64-linux-gnu --arch=arm64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 31.100 / 56. 31.100
+  libavcodec     58. 54.100 / 58. 54.100
+  libavformat    58. 29.100 / 58. 29.100
+  libavdevice    58.  8.100 / 58.  8.100
+  libavfilter     7. 57.100 /  7. 57.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  5.100 /  5.  5.100
+  libswresample   3.  5.100 /  3.  5.100
+  libpostproc    55.  5.100 / 55.  5.100
+Guessed Channel Layout for Input Stream #0.0 : mono
+Input #0, wav, from '/tmp/tmpb55x2qp3':
+  Duration: 00:00:03.00, bitrate: 512 kb/s
+    Stream #0:0: Audio: pcm_s32le ([1][0][0][0] / 0x0001), 16000 Hz, mono, s32, 512 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s32le (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Finishing stream 0:0 without any data written to it.
+Output #0, mp3, to '/tmp/tmpd154lzcx':
+  Metadata:
+    TSSE            : Lavf58.29.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 16000 Hz, mono, s32p, 64 kb/s
+    Metadata:
+      encoder         : Lavc58.54.100 libmp3lame
+size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    
+video:0kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+Output file is empty, nothing was encoded (check -ss / -t / -frames parameters if used)
+Exiting normally, received signal 2.
+
+2024-09-23 00:54:15,051 - Alog                 - INFO     - Building frontend...
+2024-09-23 00:54:15,051 - Alog                 - INFO     - Frontend already built.
+2024-09-23 00:54:25,635 - EventStorage         - INFO     - Database connected.
+2024-09-23 00:54:25,635 - SoundClassifier      - INFO     - YAMNet model loaded successfully.
+2024-09-23 00:54:28,325 - EventStorage         - INFO     - Database connected.
+2024-09-23 00:54:28,326 - SpeechRecognizer     - INFO     - Vosk models loaded successfully.
+2024-09-23 00:54:28,357 - AudioCapture         - INFO     - Audio stream started.
+2024-09-23 00:54:33,159 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/a0b8458c-94e1-430f-bb85-ba9e57c0b109.mp3
+2024-09-23 00:54:33,197 - Alog                 - INFO     - Processed audio chunk: a0b8458c-94e1-430f-bb85-ba9e57c0b109
+2024-09-23 00:54:34,213 - EventStorage         - DEBUG    - Event stored: <Event(id=37, type=sound, label=Chewing, mastication)>
+2024-09-23 00:54:34,224 - SoundClassifier      - INFO     - Sound Event: <Event(id=37, type=sound, label=Chewing, mastication)>
+2024-09-23 00:54:34,315 - EventStorage         - DEBUG    - Event stored: <Event(id=38, type=sound, label=Biting)>
+2024-09-23 00:54:34,326 - SoundClassifier      - INFO     - Sound Event: <Event(id=38, type=sound, label=Biting)>
+2024-09-23 00:54:34,452 - EventStorage         - DEBUG    - Event stored: <Event(id=39, type=sound, label=Crunch)>
+2024-09-23 00:54:34,469 - SoundClassifier      - INFO     - Sound Event: <Event(id=39, type=sound, label=Crunch)>
+2024-09-23 00:54:34,620 - EventStorage         - DEBUG    - Event stored: <Event(id=40, type=sound, label=Inside, small room)>
+2024-09-23 00:54:34,621 - SoundClassifier      - INFO     - Sound Event: <Event(id=40, type=sound, label=Inside, small room)>
+2024-09-23 00:54:34,688 - EventStorage         - DEBUG    - Event stored: <Event(id=41, type=sound, label=Squish)>
+2024-09-23 00:54:34,700 - SoundClassifier      - INFO     - Sound Event: <Event(id=41, type=sound, label=Squish)>
+2024-09-23 00:54:34,738 - EventStorage         - DEBUG    - Event stored: <Event(id=42, type=speech, label=)>
+2024-09-23 00:54:34,750 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=42, type=speech, label=)>
+2024-09-23 00:54:35,056 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/d598b0e4-9c47-42cd-878d-2c8c9d390b9b.mp3
+2024-09-23 00:54:35,102 - Alog                 - INFO     - Processed audio chunk: d598b0e4-9c47-42cd-878d-2c8c9d390b9b
+2024-09-23 00:54:35,229 - EventStorage         - DEBUG    - Event stored: <Event(id=43, type=sound, label=Biting)>
+2024-09-23 00:54:35,230 - SoundClassifier      - INFO     - Sound Event: <Event(id=43, type=sound, label=Biting)>
+2024-09-23 00:54:35,274 - EventStorage         - DEBUG    - Event stored: <Event(id=44, type=sound, label=Chewing, mastication)>
+2024-09-23 00:54:35,285 - SoundClassifier      - INFO     - Sound Event: <Event(id=44, type=sound, label=Chewing, mastication)>
+2024-09-23 00:54:35,380 - EventStorage         - DEBUG    - Event stored: <Event(id=45, type=sound, label=Crunch)>
+2024-09-23 00:54:35,392 - SoundClassifier      - INFO     - Sound Event: <Event(id=45, type=sound, label=Crunch)>
+2024-09-23 00:54:35,481 - EventStorage         - DEBUG    - Event stored: <Event(id=46, type=sound, label=Rodents, rats, mice)>
+2024-09-23 00:54:35,492 - SoundClassifier      - INFO     - Sound Event: <Event(id=46, type=sound, label=Rodents, rats, mice)>
+2024-09-23 00:54:35,582 - EventStorage         - DEBUG    - Event stored: <Event(id=47, type=sound, label=Patter)>
+2024-09-23 00:54:35,593 - SoundClassifier      - INFO     - Sound Event: <Event(id=47, type=sound, label=Patter)>
+2024-09-23 00:54:36,287 - EventStorage         - DEBUG    - Event stored: <Event(id=48, type=speech, label=)>
+2024-09-23 00:54:36,297 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=48, type=speech, label=)>
+2024-09-23 00:54:38,753 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/486bdb85-2b13-485f-b036-fee8979238b5.mp3
+2024-09-23 00:54:38,804 - Alog                 - INFO     - Processed audio chunk: 486bdb85-2b13-485f-b036-fee8979238b5
+2024-09-23 00:54:38,978 - EventStorage         - DEBUG    - Event stored: <Event(id=49, type=sound, label=Inside, small room)>
+2024-09-23 00:54:38,989 - SoundClassifier      - INFO     - Sound Event: <Event(id=49, type=sound, label=Inside, small room)>
+2024-09-23 00:54:39,068 - EventStorage         - DEBUG    - Event stored: <Event(id=50, type=sound, label=Chewing, mastication)>
+2024-09-23 00:54:39,079 - SoundClassifier      - INFO     - Sound Event: <Event(id=50, type=sound, label=Chewing, mastication)>
+2024-09-23 00:54:39,159 - EventStorage         - DEBUG    - Event stored: <Event(id=51, type=sound, label=Rodents, rats, mice)>
+2024-09-23 00:54:39,170 - SoundClassifier      - INFO     - Sound Event: <Event(id=51, type=sound, label=Rodents, rats, mice)>
+2024-09-23 00:54:39,250 - EventStorage         - DEBUG    - Event stored: <Event(id=52, type=sound, label=Patter)>
+2024-09-23 00:54:39,261 - SoundClassifier      - INFO     - Sound Event: <Event(id=52, type=sound, label=Patter)>
+2024-09-23 00:54:39,355 - EventStorage         - DEBUG    - Event stored: <Event(id=53, type=sound, label=Mouse)>
+2024-09-23 00:54:39,356 - SoundClassifier      - INFO     - Sound Event: <Event(id=53, type=sound, label=Mouse)>
+2024-09-23 00:54:39,847 - EventStorage         - DEBUG    - Event stored: <Event(id=54, type=speech, label=)>
+2024-09-23 00:54:39,858 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=54, type=speech, label=)>
+2024-09-23 00:54:40,745 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/daf60db2-0a53-44e3-ba37-fdc94ed27c64.mp3
+2024-09-23 00:54:40,784 - Alog                 - INFO     - Processed audio chunk: daf60db2-0a53-44e3-ba37-fdc94ed27c64
+2024-09-23 00:54:41,015 - EventStorage         - DEBUG    - Event stored: <Event(id=55, type=sound, label=Speech)>
+2024-09-23 00:54:41,026 - SoundClassifier      - INFO     - Sound Event: <Event(id=55, type=sound, label=Speech)>
+2024-09-23 00:54:41,111 - EventStorage         - DEBUG    - Event stored: <Event(id=56, type=sound, label=Inside, small room)>
+2024-09-23 00:54:41,122 - SoundClassifier      - INFO     - Sound Event: <Event(id=56, type=sound, label=Inside, small room)>
+2024-09-23 00:54:41,217 - EventStorage         - DEBUG    - Event stored: <Event(id=57, type=sound, label=Patter)>
+2024-09-23 00:54:41,228 - SoundClassifier      - INFO     - Sound Event: <Event(id=57, type=sound, label=Patter)>
+2024-09-23 00:54:41,329 - EventStorage         - DEBUG    - Event stored: <Event(id=58, type=sound, label=Rodents, rats, mice)>
+2024-09-23 00:54:41,340 - SoundClassifier      - INFO     - Sound Event: <Event(id=58, type=sound, label=Rodents, rats, mice)>
+2024-09-23 00:54:41,430 - EventStorage         - DEBUG    - Event stored: <Event(id=59, type=sound, label=Outside, rural or natural)>
+2024-09-23 00:54:41,441 - SoundClassifier      - INFO     - Sound Event: <Event(id=59, type=sound, label=Outside, rural or natural)>
+2024-09-23 00:54:42,342 - EventStorage         - DEBUG    - Event stored: <Event(id=60, type=speech, label=her)>
+2024-09-23 00:54:42,353 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=60, type=speech, label=her)>
+2024-09-23 00:54:44,743 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/6d18af91-9795-48b5-8ef7-f17a9182450a.mp3
+2024-09-23 00:54:44,797 - Alog                 - INFO     - Processed audio chunk: 6d18af91-9795-48b5-8ef7-f17a9182450a
+2024-09-23 00:54:44,991 - EventStorage         - DEBUG    - Event stored: <Event(id=61, type=sound, label=Speech)>
+2024-09-23 00:54:45,002 - SoundClassifier      - INFO     - Sound Event: <Event(id=61, type=sound, label=Speech)>
+2024-09-23 00:54:45,102 - EventStorage         - DEBUG    - Event stored: <Event(id=62, type=sound, label=Inside, small room)>
+2024-09-23 00:54:45,113 - SoundClassifier      - INFO     - Sound Event: <Event(id=62, type=sound, label=Inside, small room)>
+2024-09-23 00:54:45,172 - EventStorage         - DEBUG    - Event stored: <Event(id=63, type=sound, label=Scissors)>
+2024-09-23 00:54:45,173 - SoundClassifier      - INFO     - Sound Event: <Event(id=63, type=sound, label=Scissors)>
+2024-09-23 00:54:45,236 - EventStorage         - DEBUG    - Event stored: <Event(id=64, type=sound, label=Squish)>
+2024-09-23 00:54:45,247 - SoundClassifier      - INFO     - Sound Event: <Event(id=64, type=sound, label=Squish)>
+2024-09-23 00:54:45,337 - EventStorage         - DEBUG    - Event stored: <Event(id=65, type=sound, label=Shuffling cards)>
+2024-09-23 00:54:45,348 - SoundClassifier      - INFO     - Sound Event: <Event(id=65, type=sound, label=Shuffling cards)>
+2024-09-23 00:54:46,689 - EventStorage         - DEBUG    - Event stored: <Event(id=66, type=speech, label=hey hello)>
+2024-09-23 00:54:46,700 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/d2a4bca2-0cb0-455f-a072-587e161b60ec.mp3
+2024-09-23 00:54:46,721 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=66, type=speech, label=hey hello)>
+2024-09-23 00:54:46,784 - Alog                 - INFO     - Processed audio chunk: d2a4bca2-0cb0-455f-a072-587e161b60ec
+2024-09-23 00:54:46,979 - EventStorage         - DEBUG    - Event stored: <Event(id=67, type=sound, label=Speech)>
+2024-09-23 00:54:46,980 - SoundClassifier      - INFO     - Sound Event: <Event(id=67, type=sound, label=Speech)>
+2024-09-23 00:54:46,992 - EventStorage         - DEBUG    - Event stored: <Event(id=68, type=sound, label=Inside, small room)>
+2024-09-23 00:54:46,993 - SoundClassifier      - INFO     - Sound Event: <Event(id=68, type=sound, label=Inside, small room)>
+2024-09-23 00:54:47,072 - EventStorage         - DEBUG    - Event stored: <Event(id=69, type=sound, label=Scissors)>
+2024-09-23 00:54:47,083 - SoundClassifier      - INFO     - Sound Event: <Event(id=69, type=sound, label=Scissors)>
+2024-09-23 00:54:47,162 - EventStorage         - DEBUG    - Event stored: <Event(id=70, type=sound, label=Animal)>
+2024-09-23 00:54:47,173 - SoundClassifier      - INFO     - Sound Event: <Event(id=70, type=sound, label=Animal)>
+2024-09-23 00:54:47,258 - EventStorage         - DEBUG    - Event stored: <Event(id=71, type=sound, label=Camera)>
+2024-09-23 00:54:47,269 - SoundClassifier      - INFO     - Sound Event: <Event(id=71, type=sound, label=Camera)>
+2024-09-23 00:54:48,206 - EventStorage         - DEBUG    - Event stored: <Event(id=72, type=speech, label=are you doing)>
+2024-09-23 00:54:48,217 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=72, type=speech, label=are you doing)>
+2024-09-23 00:54:50,723 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/d187d367-0128-4767-a590-b665ef8e5812.mp3
+2024-09-23 00:54:50,767 - Alog                 - INFO     - Processed audio chunk: d187d367-0128-4767-a590-b665ef8e5812
+2024-09-23 00:54:50,993 - EventStorage         - DEBUG    - Event stored: <Event(id=73, type=sound, label=Speech)>
+2024-09-23 00:54:51,005 - SoundClassifier      - INFO     - Sound Event: <Event(id=73, type=sound, label=Speech)>
+2024-09-23 00:54:51,095 - EventStorage         - DEBUG    - Event stored: <Event(id=74, type=sound, label=Inside, small room)>
+2024-09-23 00:54:51,106 - SoundClassifier      - INFO     - Sound Event: <Event(id=74, type=sound, label=Inside, small room)>
+2024-09-23 00:54:51,190 - EventStorage         - DEBUG    - Event stored: <Event(id=75, type=sound, label=Animal)>
+2024-09-23 00:54:51,201 - SoundClassifier      - INFO     - Sound Event: <Event(id=75, type=sound, label=Animal)>
+2024-09-23 00:54:51,295 - EventStorage         - DEBUG    - Event stored: <Event(id=76, type=sound, label=Snake)>
+2024-09-23 00:54:51,306 - SoundClassifier      - INFO     - Sound Event: <Event(id=76, type=sound, label=Snake)>
+2024-09-23 00:54:51,396 - EventStorage         - DEBUG    - Event stored: <Event(id=77, type=sound, label=Owl)>
+2024-09-23 00:54:51,407 - SoundClassifier      - INFO     - Sound Event: <Event(id=77, type=sound, label=Owl)>
+2024-09-23 00:54:52,617 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/96c18d9c-17d7-4da9-b686-34c60d78519e.mp3
+2024-09-23 00:54:52,636 - Alog                 - INFO     - Processed audio chunk: 96c18d9c-17d7-4da9-b686-34c60d78519e
+2024-09-23 00:54:52,909 - EventStorage         - DEBUG    - Event stored: <Event(id=78, type=sound, label=Speech)>
+2024-09-23 00:54:52,922 - SoundClassifier      - INFO     - Sound Event: <Event(id=78, type=sound, label=Speech)>
+2024-09-23 00:54:53,030 - EventStorage         - DEBUG    - Event stored: <Event(id=79, type=sound, label=Inside, small room)>
+2024-09-23 00:54:53,043 - SoundClassifier      - INFO     - Sound Event: <Event(id=79, type=sound, label=Inside, small room)>
+2024-09-23 00:54:53,050 - EventStorage         - DEBUG    - Event stored: <Event(id=80, type=speech, label=how are you doing hello)>
+2024-09-23 00:54:53,068 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=80, type=speech, label=how are you doing hello)>
+2024-09-23 00:54:53,132 - EventStorage         - DEBUG    - Event stored: <Event(id=81, type=sound, label=Insect)>
+2024-09-23 00:54:53,143 - SoundClassifier      - INFO     - Sound Event: <Event(id=81, type=sound, label=Insect)>
+2024-09-23 00:54:53,212 - EventStorage         - DEBUG    - Event stored: <Event(id=82, type=sound, label=Animal)>
+2024-09-23 00:54:53,213 - SoundClassifier      - INFO     - Sound Event: <Event(id=82, type=sound, label=Animal)>
+2024-09-23 00:54:53,307 - EventStorage         - DEBUG    - Event stored: <Event(id=83, type=sound, label=Snake)>
+2024-09-23 00:54:53,319 - SoundClassifier      - INFO     - Sound Event: <Event(id=83, type=sound, label=Snake)>
+2024-09-23 00:54:54,010 - EventStorage         - DEBUG    - Event stored: <Event(id=84, type=speech, label=yes i want)>
+2024-09-23 00:54:54,021 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=84, type=speech, label=yes i want)>
+2024-09-23 00:54:56,851 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/7f4b1a12-95fa-45e5-aa85-596afb90e317.mp3
+2024-09-23 00:54:56,903 - Alog                 - INFO     - Processed audio chunk: 7f4b1a12-95fa-45e5-aa85-596afb90e317
+2024-09-23 00:54:57,027 - EventStorage         - DEBUG    - Event stored: <Event(id=85, type=sound, label=Speech)>
+2024-09-23 00:54:57,027 - SoundClassifier      - INFO     - Sound Event: <Event(id=85, type=sound, label=Speech)>
+2024-09-23 00:54:57,091 - EventStorage         - DEBUG    - Event stored: <Event(id=86, type=sound, label=Snort)>
+2024-09-23 00:54:57,102 - SoundClassifier      - INFO     - Sound Event: <Event(id=86, type=sound, label=Snort)>
+2024-09-23 00:54:57,145 - EventStorage         - DEBUG    - Event stored: <Event(id=87, type=sound, label=Breathing)>
+2024-09-23 00:54:57,152 - SoundClassifier      - INFO     - Sound Event: <Event(id=87, type=sound, label=Breathing)>
+2024-09-23 00:54:57,232 - EventStorage         - DEBUG    - Event stored: <Event(id=88, type=sound, label=Gasp)>
+2024-09-23 00:54:57,243 - SoundClassifier      - INFO     - Sound Event: <Event(id=88, type=sound, label=Gasp)>
+2024-09-23 00:54:57,337 - EventStorage         - DEBUG    - Event stored: <Event(id=89, type=sound, label=Sneeze)>
+2024-09-23 00:54:57,349 - SoundClassifier      - INFO     - Sound Event: <Event(id=89, type=sound, label=Sneeze)>
+2024-09-23 00:54:58,613 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/a82e25a8-5164-4b91-b2d9-2b08b3f89934.mp3
+2024-09-23 00:54:58,641 - Alog                 - INFO     - Processed audio chunk: a82e25a8-5164-4b91-b2d9-2b08b3f89934
+2024-09-23 00:54:58,901 - EventStorage         - DEBUG    - Event stored: <Event(id=90, type=sound, label=Speech)>
+2024-09-23 00:54:58,913 - SoundClassifier      - INFO     - Sound Event: <Event(id=90, type=sound, label=Speech)>
+2024-09-23 00:54:59,004 - EventStorage         - DEBUG    - Event stored: <Event(id=91, type=sound, label=Inside, small room)>
+2024-09-23 00:54:59,022 - SoundClassifier      - INFO     - Sound Event: <Event(id=91, type=sound, label=Inside, small room)>
+2024-09-23 00:54:59,039 - EventStorage         - DEBUG    - Event stored: <Event(id=92, type=speech, label=also there i was thinking about)>
+2024-09-23 00:54:59,039 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=92, type=speech, label=also there i was thinking about)>
+2024-09-23 00:54:59,103 - EventStorage         - DEBUG    - Event stored: <Event(id=93, type=sound, label=Narration, monologue)>
+2024-09-23 00:54:59,114 - SoundClassifier      - INFO     - Sound Event: <Event(id=93, type=sound, label=Narration, monologue)>
+2024-09-23 00:54:59,189 - EventStorage         - DEBUG    - Event stored: <Event(id=94, type=sound, label=Wood)>
+2024-09-23 00:54:59,200 - SoundClassifier      - INFO     - Sound Event: <Event(id=94, type=sound, label=Wood)>
+2024-09-23 00:54:59,294 - EventStorage         - DEBUG    - Event stored: <Event(id=95, type=sound, label=Inside, large room or hall)>
+2024-09-23 00:54:59,305 - SoundClassifier      - INFO     - Sound Event: <Event(id=95, type=sound, label=Inside, large room or hall)>
+2024-09-23 00:54:59,890 - EventStorage         - DEBUG    - Event stored: <Event(id=96, type=speech, label=may be maybe call)>
+2024-09-23 00:54:59,901 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=96, type=speech, label=may be maybe call)>
+2024-09-23 00:55:02,750 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/951adc29-27f4-4b4e-a7d3-6ddd04129022.mp3
+2024-09-23 00:55:02,803 - Alog                 - INFO     - Processed audio chunk: 951adc29-27f4-4b4e-a7d3-6ddd04129022
+2024-09-23 00:55:02,989 - EventStorage         - DEBUG    - Event stored: <Event(id=97, type=sound, label=Speech)>
+2024-09-23 00:55:03,001 - SoundClassifier      - INFO     - Sound Event: <Event(id=97, type=sound, label=Speech)>
+2024-09-23 00:55:03,080 - EventStorage         - DEBUG    - Event stored: <Event(id=98, type=sound, label=Breathing)>
+2024-09-23 00:55:03,091 - SoundClassifier      - INFO     - Sound Event: <Event(id=98, type=sound, label=Breathing)>
+2024-09-23 00:55:03,170 - EventStorage         - DEBUG    - Event stored: <Event(id=99, type=sound, label=Purr)>
+2024-09-23 00:55:03,181 - SoundClassifier      - INFO     - Sound Event: <Event(id=99, type=sound, label=Purr)>
+2024-09-23 00:55:03,250 - EventStorage         - DEBUG    - Event stored: <Event(id=100, type=sound, label=Snoring)>
+2024-09-23 00:55:03,251 - SoundClassifier      - INFO     - Sound Event: <Event(id=100, type=sound, label=Snoring)>
+2024-09-23 00:55:03,304 - EventStorage         - DEBUG    - Event stored: <Event(id=101, type=sound, label=Cat)>
+2024-09-23 00:55:03,315 - SoundClassifier      - INFO     - Sound Event: <Event(id=101, type=sound, label=Cat)>
+2024-09-23 00:55:03,866 - EventStorage         - DEBUG    - Event stored: <Event(id=102, type=speech, label=it's all)>
+2024-09-23 00:55:03,876 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=102, type=speech, label=it's all)>
+2024-09-23 00:55:04,759 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/34582579-c65a-46a7-8022-4ff5e2ca520f.mp3
+2024-09-23 00:55:04,811 - Alog                 - INFO     - Processed audio chunk: 34582579-c65a-46a7-8022-4ff5e2ca520f
+2024-09-23 00:55:04,962 - EventStorage         - DEBUG    - Event stored: <Event(id=103, type=sound, label=Fireworks)>
+2024-09-23 00:55:04,974 - SoundClassifier      - INFO     - Sound Event: <Event(id=103, type=sound, label=Fireworks)>
+2024-09-23 00:55:05,069 - EventStorage         - DEBUG    - Event stored: <Event(id=104, type=sound, label=Spray)>
+2024-09-23 00:55:05,080 - SoundClassifier      - INFO     - Sound Event: <Event(id=104, type=sound, label=Spray)>
+2024-09-23 00:55:05,171 - EventStorage         - DEBUG    - Event stored: <Event(id=105, type=sound, label=Explosion)>
+2024-09-23 00:55:05,182 - SoundClassifier      - INFO     - Sound Event: <Event(id=105, type=sound, label=Explosion)>
+2024-09-23 00:55:05,262 - EventStorage         - DEBUG    - Event stored: <Event(id=106, type=sound, label=Hiss)>
+2024-09-23 00:55:05,273 - SoundClassifier      - INFO     - Sound Event: <Event(id=106, type=sound, label=Hiss)>
+2024-09-23 00:55:05,363 - EventStorage         - DEBUG    - Event stored: <Event(id=107, type=sound, label=Vehicle)>
+2024-09-23 00:55:05,374 - SoundClassifier      - INFO     - Sound Event: <Event(id=107, type=sound, label=Vehicle)>
+2024-09-23 00:55:06,114 - EventStorage         - DEBUG    - Event stored: <Event(id=108, type=speech, label=)>
+2024-09-23 00:55:06,124 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=108, type=speech, label=)>
+2024-09-23 00:55:08,750 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/74614e24-fe06-4cb0-9168-afc0fb61fc78.mp3
+2024-09-23 00:55:08,801 - Alog                 - INFO     - Processed audio chunk: 74614e24-fe06-4cb0-9168-afc0fb61fc78
+2024-09-23 00:55:09,009 - EventStorage         - DEBUG    - Event stored: <Event(id=109, type=sound, label=Vehicle)>
+2024-09-23 00:55:09,020 - SoundClassifier      - INFO     - Sound Event: <Event(id=109, type=sound, label=Vehicle)>
+2024-09-23 00:55:09,079 - EventStorage         - DEBUG    - Event stored: <Event(id=110, type=sound, label=Boiling)>
+2024-09-23 00:55:09,079 - SoundClassifier      - INFO     - Sound Event: <Event(id=110, type=sound, label=Boiling)>
+2024-09-23 00:55:09,092 - EventStorage         - DEBUG    - Event stored: <Event(id=111, type=sound, label=Outside, rural or natural)>
+2024-09-23 00:55:09,092 - SoundClassifier      - INFO     - Sound Event: <Event(id=111, type=sound, label=Outside, rural or natural)>
+2024-09-23 00:55:09,191 - EventStorage         - DEBUG    - Event stored: <Event(id=112, type=sound, label=Liquid)>
+2024-09-23 00:55:09,197 - SoundClassifier      - INFO     - Sound Event: <Event(id=112, type=sound, label=Liquid)>
+2024-09-23 00:55:09,266 - EventStorage         - DEBUG    - Event stored: <Event(id=113, type=sound, label=Aircraft)>
+2024-09-23 00:55:09,277 - SoundClassifier      - INFO     - Sound Event: <Event(id=113, type=sound, label=Aircraft)>
+2024-09-23 00:55:09,909 - EventStorage         - DEBUG    - Event stored: <Event(id=114, type=speech, label=)>
+2024-09-23 00:55:09,920 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=114, type=speech, label=)>
+2024-09-23 00:55:10,749 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/ade7a1be-f03a-4428-abee-395f9d32ca25.mp3
+2024-09-23 00:55:10,802 - Alog                 - INFO     - Processed audio chunk: ade7a1be-f03a-4428-abee-395f9d32ca25
+2024-09-23 00:55:10,931 - EventStorage         - DEBUG    - Event stored: <Event(id=115, type=sound, label=Speech)>
+2024-09-23 00:55:10,931 - SoundClassifier      - INFO     - Sound Event: <Event(id=115, type=sound, label=Speech)>
+2024-09-23 00:55:10,985 - EventStorage         - DEBUG    - Event stored: <Event(id=116, type=sound, label=Inside, small room)>
+2024-09-23 00:55:10,996 - SoundClassifier      - INFO     - Sound Event: <Event(id=116, type=sound, label=Inside, small room)>
+2024-09-23 00:55:11,096 - EventStorage         - DEBUG    - Event stored: <Event(id=117, type=sound, label=Mechanisms)>
+2024-09-23 00:55:11,107 - SoundClassifier      - INFO     - Sound Event: <Event(id=117, type=sound, label=Mechanisms)>
+2024-09-23 00:55:11,207 - EventStorage         - DEBUG    - Event stored: <Event(id=118, type=sound, label=Camera)>
+2024-09-23 00:55:11,218 - SoundClassifier      - INFO     - Sound Event: <Event(id=118, type=sound, label=Camera)>
+2024-09-23 00:55:11,307 - EventStorage         - DEBUG    - Event stored: <Event(id=119, type=sound, label=Tools)>
+2024-09-23 00:55:11,319 - SoundClassifier      - INFO     - Sound Event: <Event(id=119, type=sound, label=Tools)>
+2024-09-23 00:55:12,359 - EventStorage         - DEBUG    - Event stored: <Event(id=120, type=speech, label=grade looks like)>
+2024-09-23 00:55:12,360 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=120, type=speech, label=grade looks like)>
+2024-09-23 00:55:14,751 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/18672b74-23bb-4784-a480-f963f24bd87d.mp3
+2024-09-23 00:55:14,795 - Alog                 - INFO     - Processed audio chunk: 18672b74-23bb-4784-a480-f963f24bd87d
+2024-09-23 00:55:14,991 - EventStorage         - DEBUG    - Event stored: <Event(id=121, type=sound, label=Speech)>
+2024-09-23 00:55:15,002 - SoundClassifier      - INFO     - Sound Event: <Event(id=121, type=sound, label=Speech)>
+2024-09-23 00:55:15,095 - EventStorage         - DEBUG    - Event stored: <Event(id=122, type=sound, label=Inside, small room)>
+2024-09-23 00:55:15,106 - SoundClassifier      - INFO     - Sound Event: <Event(id=122, type=sound, label=Inside, small room)>
+2024-09-23 00:55:15,202 - EventStorage         - DEBUG    - Event stored: <Event(id=123, type=sound, label=Narration, monologue)>
+2024-09-23 00:55:15,213 - SoundClassifier      - INFO     - Sound Event: <Event(id=123, type=sound, label=Narration, monologue)>
+2024-09-23 00:55:15,313 - EventStorage         - DEBUG    - Event stored: <Event(id=124, type=sound, label=Conversation)>
+2024-09-23 00:55:15,324 - SoundClassifier      - INFO     - Sound Event: <Event(id=124, type=sound, label=Conversation)>
+2024-09-23 00:55:15,347 - EventStorage         - DEBUG    - Event stored: <Event(id=125, type=sound, label=Tools)>
+2024-09-23 00:55:15,348 - SoundClassifier      - INFO     - Sound Event: <Event(id=125, type=sound, label=Tools)>
+2024-09-23 00:55:16,196 - EventStorage         - INFO     - Database connected.
+2024-09-23 00:55:16,323 - EventsAPI            - ERROR    - Failed to retrieve events: 'Event' object has no attribute 'to_dict'
+2024-09-23 00:55:16,797 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/2edd6f71-72eb-48ce-a349-87cfb39344cd.mp3
+2024-09-23 00:55:16,808 - EventStorage         - DEBUG    - Event stored: <Event(id=126, type=speech, label=king now it's strange)>
+2024-09-23 00:55:16,825 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=126, type=speech, label=king now it's strange)>
+2024-09-23 00:55:16,861 - Alog                 - INFO     - Processed audio chunk: 2edd6f71-72eb-48ce-a349-87cfb39344cd
+2024-09-23 00:55:17,025 - EventStorage         - DEBUG    - Event stored: <Event(id=127, type=sound, label=Speech)>
+2024-09-23 00:55:17,037 - SoundClassifier      - INFO     - Sound Event: <Event(id=127, type=sound, label=Speech)>
+2024-09-23 00:55:17,126 - EventStorage         - DEBUG    - Event stored: <Event(id=128, type=sound, label=Pig)>
+2024-09-23 00:55:17,137 - SoundClassifier      - INFO     - Sound Event: <Event(id=128, type=sound, label=Pig)>
+2024-09-23 00:55:17,227 - EventStorage         - DEBUG    - Event stored: <Event(id=129, type=sound, label=Animal)>
+2024-09-23 00:55:17,238 - SoundClassifier      - INFO     - Sound Event: <Event(id=129, type=sound, label=Animal)>
+2024-09-23 00:55:17,327 - EventStorage         - DEBUG    - Event stored: <Event(id=130, type=sound, label=Oink)>
+2024-09-23 00:55:17,339 - SoundClassifier      - INFO     - Sound Event: <Event(id=130, type=sound, label=Oink)>
+2024-09-23 00:55:17,461 - EventStorage         - DEBUG    - Event stored: <Event(id=131, type=sound, label=Livestock, farm animals, working animals)>
+2024-09-23 00:55:17,462 - SoundClassifier      - INFO     - Sound Event: <Event(id=131, type=sound, label=Livestock, farm animals, working animals)>
+2024-09-23 00:55:18,333 - EventStorage         - DEBUG    - Event stored: <Event(id=132, type=speech, label=local)>
+2024-09-23 00:55:18,344 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=132, type=speech, label=local)>
+2024-09-23 00:55:20,773 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/b93521f2-47cc-4826-962f-f2f85bcd29c9.mp3
+2024-09-23 00:55:20,811 - Alog                 - INFO     - Processed audio chunk: b93521f2-47cc-4826-962f-f2f85bcd29c9
+2024-09-23 00:55:21,053 - EventStorage         - DEBUG    - Event stored: <Event(id=133, type=sound, label=Vehicle)>
+2024-09-23 00:55:21,064 - SoundClassifier      - INFO     - Sound Event: <Event(id=133, type=sound, label=Vehicle)>
+2024-09-23 00:55:21,160 - EventStorage         - DEBUG    - Event stored: <Event(id=134, type=sound, label=Aircraft)>
+2024-09-23 00:55:21,171 - SoundClassifier      - INFO     - Sound Event: <Event(id=134, type=sound, label=Aircraft)>
+2024-09-23 00:55:21,270 - EventStorage         - DEBUG    - Event stored: <Event(id=135, type=sound, label=Helicopter)>
+2024-09-23 00:55:21,282 - SoundClassifier      - INFO     - Sound Event: <Event(id=135, type=sound, label=Helicopter)>
+2024-09-23 00:55:21,346 - EventStorage         - DEBUG    - Event stored: <Event(id=136, type=sound, label=Fixed-wing aircraft, airplane)>
+2024-09-23 00:55:21,346 - SoundClassifier      - INFO     - Sound Event: <Event(id=136, type=sound, label=Fixed-wing aircraft, airplane)>
+2024-09-23 00:55:21,390 - EventStorage         - DEBUG    - Event stored: <Event(id=137, type=sound, label=Outside, rural or natural)>
+2024-09-23 00:55:21,401 - SoundClassifier      - INFO     - Sound Event: <Event(id=137, type=sound, label=Outside, rural or natural)>
+2024-09-23 00:55:21,955 - EventStorage         - DEBUG    - Event stored: <Event(id=138, type=speech, label=)>
+2024-09-23 00:55:21,966 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=138, type=speech, label=)>
+2024-09-23 00:55:22,747 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/fcbce339-b5ad-4e8d-b9d0-8fb260bc6521.mp3
+2024-09-23 00:55:22,800 - Alog                 - INFO     - Processed audio chunk: fcbce339-b5ad-4e8d-b9d0-8fb260bc6521
+2024-09-23 00:55:22,966 - EventStorage         - DEBUG    - Event stored: <Event(id=139, type=sound, label=Speech)>
+2024-09-23 00:55:22,966 - SoundClassifier      - INFO     - Sound Event: <Event(id=139, type=sound, label=Speech)>
+2024-09-23 00:55:23,015 - EventStorage         - DEBUG    - Event stored: <Event(id=140, type=sound, label=Spray)>
+2024-09-23 00:55:23,026 - SoundClassifier      - INFO     - Sound Event: <Event(id=140, type=sound, label=Spray)>
+2024-09-23 00:55:23,100 - EventStorage         - DEBUG    - Event stored: <Event(id=141, type=sound, label=Liquid)>
+2024-09-23 00:55:23,111 - SoundClassifier      - INFO     - Sound Event: <Event(id=141, type=sound, label=Liquid)>
+2024-09-23 00:55:23,195 - EventStorage         - DEBUG    - Event stored: <Event(id=142, type=sound, label=Inside, small room)>
+2024-09-23 00:55:23,206 - SoundClassifier      - INFO     - Sound Event: <Event(id=142, type=sound, label=Inside, small room)>
+2024-09-23 00:55:23,291 - EventStorage         - DEBUG    - Event stored: <Event(id=143, type=sound, label=White noise)>
+2024-09-23 00:55:23,302 - SoundClassifier      - INFO     - Sound Event: <Event(id=143, type=sound, label=White noise)>
+2024-09-23 00:55:24,649 - EventStorage         - DEBUG    - Event stored: <Event(id=144, type=speech, label=some events maybe)>
+2024-09-23 00:55:24,660 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=144, type=speech, label=some events maybe)>
+2024-09-23 00:55:26,750 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/24e8ed48-7485-47d1-91bb-cda6cfc499ef.mp3
+2024-09-23 00:55:26,799 - Alog                 - INFO     - Processed audio chunk: 24e8ed48-7485-47d1-91bb-cda6cfc499ef
+2024-09-23 00:55:26,975 - EventStorage         - DEBUG    - Event stored: <Event(id=145, type=sound, label=Speech)>
+2024-09-23 00:55:26,991 - SoundClassifier      - INFO     - Sound Event: <Event(id=145, type=sound, label=Speech)>
+2024-09-23 00:55:27,045 - EventStorage         - DEBUG    - Event stored: <Event(id=146, type=sound, label=Insect)>
+2024-09-23 00:55:27,046 - SoundClassifier      - INFO     - Sound Event: <Event(id=146, type=sound, label=Insect)>
+2024-09-23 00:55:27,079 - EventStorage         - DEBUG    - Event stored: <Event(id=147, type=sound, label=Breathing)>
+2024-09-23 00:55:27,090 - SoundClassifier      - INFO     - Sound Event: <Event(id=147, type=sound, label=Breathing)>
+2024-09-23 00:55:27,179 - EventStorage         - DEBUG    - Event stored: <Event(id=148, type=sound, label=Snoring)>
+2024-09-23 00:55:27,191 - SoundClassifier      - INFO     - Sound Event: <Event(id=148, type=sound, label=Snoring)>
+2024-09-23 00:55:27,285 - EventStorage         - DEBUG    - Event stored: <Event(id=149, type=sound, label=Inside, small room)>
+2024-09-23 00:55:27,296 - SoundClassifier      - INFO     - Sound Event: <Event(id=149, type=sound, label=Inside, small room)>
+2024-09-23 00:55:28,532 - EventStorage         - DEBUG    - Event stored: <Event(id=150, type=speech, label=nothing source in)>
+2024-09-23 00:55:28,543 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=150, type=speech, label=nothing source in)>
+2024-09-23 00:55:28,668 - AudioManager         - DEBUG    - Audio chunk stored: audio_chunks/77eba555-d5cd-48d1-a943-6aab99ff2b1f.mp3
+2024-09-23 00:55:28,719 - Alog                 - INFO     - Processed audio chunk: 77eba555-d5cd-48d1-a943-6aab99ff2b1f
+2024-09-23 00:55:28,894 - EventStorage         - DEBUG    - Event stored: <Event(id=151, type=sound, label=Speech)>
+2024-09-23 00:55:28,905 - SoundClassifier      - INFO     - Sound Event: <Event(id=151, type=sound, label=Speech)>
+2024-09-23 00:55:28,984 - EventStorage         - DEBUG    - Event stored: <Event(id=152, type=sound, label=Inside, small room)>
+2024-09-23 00:55:28,995 - SoundClassifier      - INFO     - Sound Event: <Event(id=152, type=sound, label=Inside, small room)>
+2024-09-23 00:55:29,080 - EventStorage         - DEBUG    - Event stored: <Event(id=153, type=sound, label=Rodents, rats, mice)>
+2024-09-23 00:55:29,091 - SoundClassifier      - INFO     - Sound Event: <Event(id=153, type=sound, label=Rodents, rats, mice)>
+2024-09-23 00:55:29,197 - EventStorage         - DEBUG    - Event stored: <Event(id=154, type=sound, label=Mouse)>
+2024-09-23 00:55:29,197 - SoundClassifier      - INFO     - Sound Event: <Event(id=154, type=sound, label=Mouse)>
+2024-09-23 00:55:29,210 - EventStorage         - DEBUG    - Event stored: <Event(id=155, type=sound, label=Patter)>
+2024-09-23 00:55:29,211 - SoundClassifier      - INFO     - Sound Event: <Event(id=155, type=sound, label=Patter)>
+2024-09-23 00:55:29,671 - EventStorage         - DEBUG    - Event stored: <Event(id=156, type=speech, label=ted)>
+2024-09-23 00:55:29,681 - SpeechRecognizer     - INFO     - Speech Event: <Event(id=156, type=speech, label=ted)>

@@ -7,6 +7,7 @@ node_modules/
 
 # Environment
 .env
+venv/
 
 # Database
 backend/database/events.db

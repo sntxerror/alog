@@ -1,0 +1,15 @@
+tensorflow=2.13.1
+tensorflow_hub
+numpy
+scipy
+sounddevice
+webrtcvad
+pydub
+flask
+flask_restful
+flask_cors
+sqlalchemy
+marshmallow
+pyyaml
+vosk
+python-dateutil

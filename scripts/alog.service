@@ -1,0 +1,13 @@
+[Unit]
+Description=Alog AI-Powered Wearable Device Service
+After=network.target
+
+[Service]
+User=khadas
+WorkingDirectory=/home/khadas/alog/backend
+ExecStart=/home/khadas/alog/venv/bin/python app.py
+Environment="PATH=/home/khadas/alog/venv/bin"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
