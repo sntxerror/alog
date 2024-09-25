@@ -11,9 +11,15 @@ venv/
 
 # Database
 backend/database/events.db
+backend/database/events.db-journal
 
 # Logs
 backend/logs/
+logs/
+
+# Audio
+backend/audio_chunks/
+audio_chuks/
 
 # Build
 frontend/build/
