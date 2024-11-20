@@ -7,6 +7,7 @@ import os
 import sys
 import queue
 import numpy as np
+import time
 
 from flask import Flask, send_from_directory
 from flask_restful import Api
@@ -24,16 +25,11 @@ from services.speech_recognizer import SpeechRecognizer
 from services.audio_manager import AudioManager
 from services.speech_detector import SpeechDetector
 
-# Ensure the database directory exists
-db_dir = os.path.dirname(DATABASE_PATH)
-if not os.path.exists(db_dir):
-    os.makedirs(db_dir)
-    logger.info(f"Created database directory at {db_dir}")
-
 # Set up logging
 setup_logger()
 logger = logging.getLogger('Alog')
 
+# Ensure the database directory exists
 db_dir = os.path.dirname(DATABASE_PATH)
 if not os.path.exists(db_dir):
     os.makedirs(db_dir)
@@ -77,6 +73,16 @@ def not_found(e):
     # For SPA, route all unknown paths to index.html
     return send_from_directory(app.static_folder, 'index.html')
 
+# Endpoint to serve audio files
+@app.route('/api/audio/<audio_id>')
+def get_audio(audio_id):
+    audio_manager = AudioManager(storage_path='audio_chunks')
+    filepath = audio_manager.get_audio_chunk(audio_id)
+    if filepath and os.path.exists(filepath):
+        return send_from_directory(directory=audio_manager.storage_path, filename=f"{audio_id}.mp3")
+    else:
+        return {'error': 'Audio not found'}, 404
+
 def start_services():
     audio_capture = AudioCapture(sample_rate=16000)  # Set sample_rate to 16000 Hz
     sound_classifier = SoundClassifier()
@@ -102,7 +108,7 @@ def start_services():
             audio_buffer.extend(indata.copy().flatten())
 
             # Check if buffer has enough samples for CHUNK_SIZE
-            if len(audio_buffer) >= CHUNK_SIZE:
+            while len(audio_buffer) >= CHUNK_SIZE:
                 # Extract a chunk
                 chunk = np.array(audio_buffer[:CHUNK_SIZE])
                 del audio_buffer[:CHUNK_SIZE]
@@ -116,23 +122,33 @@ def start_services():
             if chunk is None:
                 break  # Exit the thread
 
+            # Ensure chunk is numpy array of float32
+            if chunk.dtype != np.float32:
+                chunk = chunk.astype(np.float32)
+
             # Store audio chunk
             audio_id = audio_manager.store_audio_chunk(chunk)
 
-            # Classify sound in a separate thread
-            threading.Thread(target=sound_classifier.classify, args=(chunk, audio_id)).start()
-
-            # Detect speech
-            if speech_detector.detect(chunk):
-                # Recognize speech in a separate thread
-                threading.Thread(target=speech_recognizer.recognize, args=(chunk, audio_id, 'en')).start()
-            else:
-                logger.debug("No speech detected.")
-
-            # Log events to console
-            logger.info(f"Processed audio chunk: {audio_id}")
+            # Process events in a separate thread
+            threading.Thread(target=process_events, args=(chunk, audio_id)).start()
 
             audio_queue.task_done()
+
+    def process_events(chunk, audio_id):
+        # Detect speech
+        is_speech = speech_detector.detect(chunk)
+
+        # Classify sound
+        sound_classifier.classify(chunk, audio_id)
+
+        if is_speech:
+            # Recognize speech
+            speech_recognizer.recognize(chunk, audio_id, 'en')
+        else:
+            logger.debug("No speech detected.")
+
+        # Log events to console
+        logger.info(f"Processed audio chunk: {audio_id}")
 
     # Start the audio processing thread
     processing_thread = threading.Thread(target=process_audio, daemon=True)
@@ -143,7 +159,7 @@ def start_services():
     # Keep the main thread alive
     try:
         while True:
-            pass
+            time.sleep(1)
     except KeyboardInterrupt:
         # Clean up on exit
         audio_queue.put(None)

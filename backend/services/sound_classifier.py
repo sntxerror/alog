@@ -1,3 +1,5 @@
+# backend/services/sound_classifier.py
+
 import tensorflow as tf
 import numpy as np
 import logging
@@ -16,11 +18,6 @@ class SoundClassifier:
             self.model = tf.saved_model.load(model_path)
             # Access the serving signature
             self.infer = self.model.signatures['serving_default']
-
-            # Print signature details for debugging
-            # You can comment these out after confirming
-            print("Signature inputs:", self.infer.structured_input_signature)
-            print("Signature outputs:", self.infer.structured_outputs)
 
             # Load class names from yamnet_class_map.csv
             class_map_path = os.path.join('models', 'yamnet', 'assets', 'yamnet_class_map.csv')
@@ -57,9 +54,12 @@ class SoundClassifier:
             top_indices = np.argsort(mean_scores)[::-1][:5]
             timestamp = datetime.utcnow()
 
+            # Group similar events
+            event_group = []
             for idx in top_indices:
                 label = self.class_names[idx]
                 confidence = float(mean_scores[idx])
+
                 event = Event(
                     event_type='sound',
                     label=label,
@@ -68,6 +68,10 @@ class SoundClassifier:
                     audio_id=audio_id
                 )
                 self.event_storage.store_event(event)
-                self.logger.info(f"Sound Event: {event}")
+                event_group.append(event)
+
+            # Log grouped events
+            self.logger.info(f"Sound Events Grouped: {[str(event) for event in event_group]}")
+
         except Exception as e:
             self.logger.error(f"Sound classification failed: {e}")

@@ -19,7 +19,7 @@ logs/
 
 # Audio
 backend/audio_chunks/
-audio_chuks/
+audio_chunks/
 
 # Build
 frontend/build/

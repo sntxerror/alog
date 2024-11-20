@@ -21,10 +21,13 @@ class AudioManager:
         try:
             audio_id = str(uuid.uuid4())
             filepath = os.path.join(self.storage_path, f"{audio_id}.mp3")
+            # Ensure audio_data is int16
+            if audio_data.dtype != np.int16:
+                audio_data = (audio_data * 32767).astype(np.int16)
             audio_segment = AudioSegment(
                 audio_data.tobytes(),
                 frame_rate=16000,
-                sample_width=audio_data.dtype.itemsize,
+                sample_width=2,  # 2 bytes per sample
                 channels=1
             )
             audio_segment.export(filepath, format="mp3", bitrate="64k")

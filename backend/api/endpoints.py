@@ -4,19 +4,18 @@ from flask import request
 from flask_restful import Resource
 from services.event_storage import EventStorage
 from marshmallow import Schema, fields
-from dateutil.parser import isoparse  # Import isoparse
+from dateutil.parser import isoparse
 import logging
 
 class EventSchema(Schema):
     id = fields.Int()
     event_type = fields.Str()
     label = fields.Str()
-    confidence = fields.Float()
+    confidence = fields.Float(allow_none=True)
     timestamp = fields.DateTime()
-    duration = fields.Float()
-    meta_info = fields.Str()
+    duration = fields.Float(allow_none=True)
+    meta_info = fields.Str(allow_none=True)
     audio_id = fields.Str()
-
 
 class EventsAPI(Resource):
     def get(self):
@@ -36,7 +35,8 @@ class EventsAPI(Resource):
         try:
             event_storage = EventStorage()
             events = event_storage.get_events(start_time, end_time)
-            events_dict = [event.to_dict() for event in events]
+            schema = EventSchema(many=True)
+            events_dict = schema.dump(events)
             return events_dict, 200
         except Exception as e:
             logger.error(f"Failed to retrieve events: {e}")

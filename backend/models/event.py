@@ -18,4 +18,16 @@ class Event(Base):
     audio_id = Column(String(100))
 
     def __repr__(self):
-        return f"<Event(id={self.id}, type={self.event_type}, label={self.label})>"
+        return f"<Event(id={self.id}, type={self.event_type}, label={self.label}, confidence={self.confidence})>"
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'event_type': self.event_type,
+            'label': self.label,
+            'confidence': self.confidence,
+            'timestamp': self.timestamp.isoformat(),
+            'duration': self.duration,
+            'meta_info': self.meta_info,
+            'audio_id': self.audio_id,
+        }
