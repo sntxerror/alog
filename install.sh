@@ -49,7 +49,28 @@ apt-get install -y \
     ffmpeg \
     console-setup \
     console-data \
-    terminus-font
+    terminus-font \
+    network-manager \
+    wireless-tools
+
+# Set up NetworkManager configuration
+print_status "Configuring NetworkManager..."
+cat > /etc/NetworkManager/conf.d/10-globally-managed-devices.conf << EOF
+[keyfile]
+unmanaged-devices=none
+EOF
+
+# Disable default netplan configuration
+if [ -d "/etc/netplan" ]; then
+    print_status "Backing up and disabling netplan configuration..."
+    mkdir -p /etc/netplan.bak
+    mv /etc/netplan/*.yaml /etc/netplan.bak/ 2>/dev/null || true
+fi
+
+# Configure WiFi connection
+print_status "Setting up WiFi connection..."
+nmcli radio wifi on
+nmcli device wifi connect "SILK_631E08" password "${WIFI_PASSWORD:-}"
 
 # Create application directory
 APP_DIR="${USER_HOME}/alog"
@@ -73,12 +94,13 @@ cd "${APP_DIR}/frontend"
 su - ${ACTUAL_USER} -c "cd ${APP_DIR}/frontend && npm install"
 su - ${ACTUAL_USER} -c "cd ${APP_DIR}/frontend && npm run build"
 
-# Set up systemd service
+# Set up systemd service with network dependency
 print_status "Setting up systemd service..."
 cat > /etc/systemd/system/alog.service << EOF
 [Unit]
 Description=Alog AI-Powered Wearable Device Service
-After=network.target
+After=NetworkManager-wait-online.service
+Wants=NetworkManager-wait-online.service
 StartLimitIntervalSec=0
 
 [Service]
@@ -100,6 +122,11 @@ StandardError=journal+console
 [Install]
 WantedBy=multi-user.target
 EOF
+
+# Enable NetworkManager service
+print_status "Enabling NetworkManager service..."
+systemctl enable NetworkManager
+systemctl start NetworkManager
 
 # Set up automatic login and log viewing
 print_status "Setting up automatic login and log viewing..."

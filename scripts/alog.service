@@ -1,6 +1,7 @@
 [Unit]
 Description=Alog AI-Powered Wearable Device Service
-After=network.target
+After=NetworkManager-wait-online.service
+Wants=NetworkManager-wait-online.service
 StartLimitIntervalSec=0
 
 [Service]
@@ -9,13 +10,16 @@ User=khadas
 WorkingDirectory=/home/khadas/alog
 Environment="PATH=/home/khadas/alog/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 Environment="PYTHONPATH=/home/khadas/alog"
+Environment="PYTHONUNBUFFERED=1"
+Environment="FORCE_COLOR=1"
+Environment="ENABLED_LOG_LEVELS=EVENT,SPEECH,ERROR"
 Environment="DISPLAY=:0"
 ExecStartPre=/home/khadas/alog/venv/bin/python -m pip install -r /home/khadas/alog/backend/requirements.txt
 ExecStart=/home/khadas/alog/venv/bin/python /home/khadas/alog/backend/app.py
 Restart=always
 RestartSec=1
-StandardOutput=journal
-StandardError=journal
+StandardOutput=journal+console
+StandardError=journal+console
 
 [Install]
 WantedBy=multi-user.target

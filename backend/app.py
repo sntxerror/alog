@@ -2,14 +2,14 @@
 
 import threading
 import logging
-import subprocess
 import os
 import sys
 import queue
 import numpy as np
 import time
 
-from flask import Flask, send_from_directory
+from services.websocket_logger import setup_websocket_logging
+from flask import Flask, send_from_directory, send_file
 from flask_restful import Api
 from flask_cors import CORS
 from sqlalchemy import create_engine
@@ -35,43 +35,47 @@ if not os.path.exists(db_dir):
     os.makedirs(db_dir)
     logger.info(f"Created database directory at {db_dir}")
 
-# Build the frontend (if not already built)
-def build_frontend():
-    logger.info("Building frontend...")
-    frontend_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'frontend'))
-    if not os.path.exists(os.path.join(frontend_path, 'build')):
-        subprocess.run(["npm", "install"], cwd=frontend_path)
-        result = subprocess.run(["npm", "run", "build"], cwd=frontend_path)
-        if result.returncode != 0:
-            logger.error("Failed to build frontend.")
-            sys.exit(1)
-        else:
-            logger.info("Frontend built successfully.")
-    else:
-        logger.info("Frontend already built.")
-
 # Initialize the database
 engine = create_engine(DATABASE_URI)
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 
 # Initialize Flask app
-app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
+app = Flask(__name__, static_folder='../frontend', static_url_path='/')
 CORS(app)
 api = Api(app)
 
-# Register API endpoints
+# WebSocket setup
+setup_websocket_logging(app, logger)
+
+# API endpoints
 api.add_resource(EventsAPI, '/api/events')
 
 # Serve the frontend
 @app.route('/')
 def serve_frontend():
-    return send_from_directory(app.static_folder, 'index.html')
+    try:
+        frontend_path = os.path.join(os.path.dirname(__file__), '..', 'frontend', 'index.html')
+        if not os.path.exists(frontend_path):
+            logger.error(f"Frontend file not found at: {frontend_path}")
+            return "Frontend file not found", 404
+        return send_file(frontend_path)
+    except Exception as e:
+        logger.error(f"Error serving frontend: {e}")
+        return str(e), 500
 
+# Error handling
 @app.errorhandler(404)
 def not_found(e):
-    # For SPA, route all unknown paths to index.html
-    return send_from_directory(app.static_folder, 'index.html')
+    try:
+        frontend_path = os.path.join(os.path.dirname(__file__), '..', 'frontend', 'index.html')
+        if not os.path.exists(frontend_path):
+            logger.error(f"Frontend file not found at: {frontend_path}")
+            return "Frontend file not found", 404
+        return send_file(frontend_path)
+    except Exception as e:
+        logger.error(f"Error serving frontend: {e}")
+        return str(e), 500
 
 # Endpoint to serve audio files
 @app.route('/api/audio/<audio_id>')
@@ -167,11 +171,8 @@ def start_services():
         audio_capture.stop_stream()
 
 if __name__ == '__main__':
-    # Build the frontend
-    build_frontend()
-
     # Start the services
     threading.Thread(target=start_services).start()
 
-    # Run the Flask app
-    app.run(host='0.0.0.0', port=5000)
+    # Run the Flask app on all interfaces
+    app.run(host='0.0.0.0', port=5000, debug=False)

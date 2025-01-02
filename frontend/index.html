@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alog - Log Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #569cd6;
+            margin-bottom: 20px;
+        }
+
+        .log-container {
+            background: #2d2d2d;
+            border: 1px solid #3d3d3d;
+            border-radius: 4px;
+            padding: 10px;
+            position: relative;
+            height: calc(100vh - 100px);
+        }
+
+        #logViewer {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            color: inherit;
+            font-family: inherit;
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 10px;
+            resize: none;
+            outline: none;
+            white-space: pre;
+            overflow-wrap: normal;
+            overflow-x: scroll;
+        }
+
+        .controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 100;
+        }
+
+        button {
+            background: #0e639c;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 8px;
+            font-size: 12px;
+        }
+
+        button:hover {
+            background: #1177bb;
+        }
+
+        .status {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            background: #333;
+            font-size: 12px;
+            transition: background-color 0.3s;
+        }
+
+        .status.connected {
+            background: #10722f;
+        }
+
+        .status.disconnected {
+            background: #942626;
+        }
+
+        .status.connecting {
+            background: #8f7c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Alog Log Viewer</h1>
+        <div class="log-container">
+            <textarea id="logViewer" readonly></textarea>
+            <div class="controls">
+                <button onclick="clearLogs()">Clear</button>
+                <button onclick="toggleAutoscroll()">Toggle Autoscroll</button>
+            </div>
+        </div>
+        <div id="connectionStatus" class="status connecting">Connecting...</div>
+    </div>
+
+    <script>
+        let autoscroll = true;
+        let reconnectAttempts = 0;
+        const maxReconnectAttempts = 5;
+        const reconnectDelay = 3000;
+        
+        const logViewer = document.getElementById('logViewer');
+        const statusIndicator = document.getElementById('connectionStatus');
+        let socket = null;
+
+        function updateStatus(status, isConnected) {
+            statusIndicator.textContent = status;
+            statusIndicator.className = 'status ' + (isConnected ? 'connected' : 'disconnected');
+        }
+
+        function connectWebSocket() {
+            if (reconnectAttempts >= maxReconnectAttempts) {
+                updateStatus('Max reconnection attempts reached. Please refresh the page.', false);
+                return;
+            }
+
+            statusIndicator.className = 'status connecting';
+            statusIndicator.textContent = 'Connecting...';
+
+            // Get the current host and replace http(s) with ws(s)
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${protocol}//${window.location.host}/ws/logs`;
+            
+            console.log('Attempting to connect to:', wsUrl);
+            socket = new WebSocket(wsUrl);
+
+            socket.onopen = () => {
+                console.log('WebSocket connected');
+                reconnectAttempts = 0;
+                updateStatus('Connected', true);
+                // Add initial message to confirm connection
+                appendLog('WebSocket connection established');
+            };
+
+            socket.onclose = (event) => {
+                console.log('WebSocket closed:', event);
+                updateStatus('Disconnected - Reconnecting...', false);
+                reconnectAttempts++;
+                setTimeout(connectWebSocket, reconnectDelay);
+            };
+
+            socket.onerror = (error) => {
+                console.error('WebSocket error:', error);
+                appendLog('Error connecting to log stream. Check console for details.');
+            };
+
+            socket.onmessage = (event) => {
+                if (event.data.trim()) {  // Only process non-empty messages
+                    appendLog(event.data);
+                }
+            };
+        }
+
+        function appendLog(message) {
+            logViewer.value += message + '\n';
+            if (autoscroll) {
+                logViewer.scrollTop = logViewer.scrollHeight;
+            }
+        }
+
+        function clearLogs() {
+            logViewer.value = '';
+        }
+
+        function toggleAutoscroll() {
+            autoscroll = !autoscroll;
+            if (autoscroll) {
+                logViewer.scrollTop = logViewer.scrollHeight;
+            }
+        }
+
+        // Handle manual scrolling
+        logViewer.addEventListener('wheel', () => {
+            if (logViewer.scrollTop + logViewer.clientHeight < logViewer.scrollHeight) {
+                autoscroll = false;
+            }
+        });
+
+        // Initial connection
+        connectWebSocket();
+    </script>
+</body>
+</html>
