@@ -14,13 +14,12 @@ class SpeechRecognizer:
         self.logger = logging.getLogger('SpeechRecognizer')
         try:
             base_dir = os.path.dirname(os.path.abspath(__file__))
-            # Use absolute paths
             self.models = {
                 'en': Model('/home/khadas/alog/models/vosk/en'),
                 'ru': Model('/home/khadas/alog/models/vosk/ru')
             }
             self.event_storage = EventStorage()
-            self.logger.info("Vosk models loaded successfully.")
+            self.logger.info("Vosk models loaded successfully")
         except Exception as e:
             self.logger.error(f"Failed to load Vosk models: {e}")
 
@@ -38,15 +37,21 @@ class SpeechRecognizer:
             result = rec.Result()
             text = json.loads(result).get('text', '')
 
-            timestamp = datetime.utcnow()
-            event = Event(
-                event_type='speech',
-                label=text.strip(),
-                confidence=None,
-                timestamp=timestamp,
-                audio_id=audio_id
-            )
-            self.event_storage.store_event(event)
-            self.logger.info(f"Speech Event: {event}")
+            if text.strip():  # Only log if there's actual speech content
+                # Log with enhanced format
+                self.logger.speech(text.strip(), language=language.upper())
+
+                # Store in database
+                timestamp = datetime.utcnow()
+                event = Event(
+                    event_type='speech',
+                    label=text.strip(),
+                    confidence=None,
+                    timestamp=timestamp,
+                    meta_info=f"Language: {language.upper()}",
+                    audio_id=audio_id
+                )
+                self.event_storage.store_event(event)
+
         except Exception as e:
             self.logger.error(f"Speech recognition failed: {e}")

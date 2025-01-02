@@ -13,21 +13,25 @@ class SoundClassifier:
     def __init__(self):
         self.logger = logging.getLogger('SoundClassifier')
         try:
-            # Load the YAMNet model from the SavedModel directory
+            # Load the YAMNet model
             model_path = os.path.join('models', 'yamnet')
             self.model = tf.saved_model.load(model_path)
-            # Access the serving signature
             self.infer = self.model.signatures['serving_default']
 
-            # Load class names from yamnet_class_map.csv
+            # Load class names and categories from yamnet_class_map.csv
             class_map_path = os.path.join('models', 'yamnet', 'assets', 'yamnet_class_map.csv')
+            self.class_names = []
+            self.categories = {}
+            
             with open(class_map_path, 'r') as f:
                 reader = csv.reader(f)
-                next(reader)  # Skip the header
-                self.class_names = [row[2] for row in reader]  # 'display_name' is the third column
+                next(reader)  # Skip header
+                for row in reader:
+                    self.class_names.append(row[2])  # display_name
+                    self.categories[row[2]] = row[3]  # category
 
             self.event_storage = EventStorage()
-            self.logger.info("YAMNet model loaded successfully.")
+            self.logger.info("YAMNet model loaded successfully")
         except Exception as e:
             self.logger.error(f"Failed to load YAMNet model: {e}")
 
@@ -43,35 +47,42 @@ class SoundClassifier:
             if max_val > 0:
                 audio_data = audio_data / max_val
 
-            # Convert to tensor without adding batch dimension
+            # Convert to tensor
             audio_tensor = tf.convert_to_tensor(audio_data, dtype=tf.float32)
 
-            # Run inference using the serving signature
+            # Run inference
             outputs = self.infer(input_waveform=audio_tensor)
             scores = outputs['output_0'].numpy()
 
+            # Get mean scores and top predictions
             mean_scores = np.mean(scores, axis=0)
             top_indices = np.argsort(mean_scores)[::-1][:5]
             timestamp = datetime.utcnow()
 
-            # Group similar events
-            event_group = []
+            # Log and store each significant sound event
             for idx in top_indices:
                 label = self.class_names[idx]
+                category = self.categories.get(label, "Unknown Category")
                 confidence = float(mean_scores[idx])
+                
+                if confidence > 0.1:  # Only log significant detections
+                    # Log with enhanced format
+                    self.logger.event(
+                        label,
+                        category=category,
+                        confidence=confidence
+                    )
 
-                event = Event(
-                    event_type='sound',
-                    label=label,
-                    confidence=confidence,
-                    timestamp=timestamp,
-                    audio_id=audio_id
-                )
-                self.event_storage.store_event(event)
-                event_group.append(event)
-
-            # Log grouped events
-            self.logger.info(f"Sound Events Grouped: {[str(event) for event in event_group]}")
+                    # Store in database
+                    event = Event(
+                        event_type='sound',
+                        label=label,
+                        confidence=confidence,
+                        timestamp=timestamp,
+                        meta_info=category,
+                        audio_id=audio_id
+                    )
+                    self.event_storage.store_event(event)
 
         except Exception as e:
             self.logger.error(f"Sound classification failed: {e}")

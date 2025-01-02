@@ -13,3 +13,4 @@ marshmallow
 pyyaml
 vosk
 python-dateutil
+colorama
